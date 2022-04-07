@@ -27,3 +27,34 @@ Chukwuemeka@Ubuntu:~$ export CFILE=main.c
 Chukwuemeka@Ubuntu:~$ ./2-assembler
 Chukwuemeka@Ubuntu:~$ __
 </pre>
+
+### 3-name 
+This will compile a C file into an executable file called `cisfun`.The name of the C file is stored in the `$CFILE`. In order to run the program, open up a terminal and type:
+<pre>
+Chukwuemeka@Ubuntu:~$ export CFILE=main.c
+Chukwuemeka@Ubuntu:~$ ./3-name
+Chukwuemeka@Ubuntu:~$ ls
+cisfun
+Chukwuemeka@Ubuntu:~$ 
+</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
