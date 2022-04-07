@@ -10,4 +10,12 @@ Chukwuemeka@Ubuntu:~$ ./0-preprocessor
 Chukwuemeka@Ubuntu:~$ ./c
 Hello World
 Chukwuemeka@Ubuntu:~$ _
-</pre> 
+</pre>
+
+### 1-compiler
+This will compile and assemble C code without linking into a file with the same name as the C file whose name is stored in the global variable `$CFILE`. In order to run this script, open up a terminal and type: 
+<pre>
+Chukwuemeka@Ubuntu:~$ export CFILE=main.c
+Chukwuemeka@Ubuntu:~$ ./1-compiler
+Chukwuemeka@Ubuntu:~$ __
+</pre>
