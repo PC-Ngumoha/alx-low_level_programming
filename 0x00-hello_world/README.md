@@ -19,3 +19,11 @@ Chukwuemeka@Ubuntu:~$ export CFILE=main.c
 Chukwuemeka@Ubuntu:~$ ./1-compiler
 Chukwuemeka@Ubuntu:~$ __
 </pre>
+
+### 2-assembler
+This will compile the C code and assemble it into system specific assembly code. In order to run the script, do the following:
+<pre>
+Chukwuemeka@Ubuntu:~$ export CFILE=main.c
+Chukwuemeka@Ubuntu:~$ ./2-assembler
+Chukwuemeka@Ubuntu:~$ __
+</pre>
