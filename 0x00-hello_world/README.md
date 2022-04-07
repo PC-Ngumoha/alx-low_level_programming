@@ -9,5 +9,5 @@ Chukwuemeka@Ubuntu:~$ export CFILE=0-main.c
 Chukwuemeka@Ubuntu:~$ ./0-preprocessor
 Chukwuemeka@Ubuntu:~$ ./c
 Hello World
-Chukwuemeka@Ubuntu:~$ **_**
+Chukwuemeka@Ubuntu:~$ _
 </pre> 
