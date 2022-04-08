@@ -83,6 +83,20 @@ abcdfghijklmnoprstuvwxyz
 Chukwuemeka@Ubuntu:~$ _
 </pre>
 
+### 5-print_numbers.c
+When this program is compiled and run, it will print all the numbers of the decimal number system to the terminal and then it will print a newline character. In order to use it: 
+
+**Compile it** : 
+<pre>
+Chukwuemeka@Ubuntu:~$ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 5-print_numbers.c -o 5-print_numbers
+</pre>
+
+**Run it**:   
+<pre>
+Chukwuemeka@Ubuntu:~$ ./5-print_numbers
+0123456789
+Chukwuemeka@Ubuntu:~$ _
+</pre>
 
 
 
