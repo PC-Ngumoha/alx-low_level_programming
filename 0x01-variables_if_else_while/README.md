@@ -38,3 +38,34 @@ Last digit of 110478200 is 0 and is 0
 Chukwuemeka@Ubuntu:~$ _
 </pre>
 
+### 2-print_alphabet.c
+When this program is compiled and run, it will print all the characters of the english alphabet to the screen and go to a newline. In order to use the program: 
+
+**Compile it** : 
+<pre>
+Chukwuemeka@Ubuntu:~$ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 2-print_alphabet.c -o 2-print_alphabet
+</pre>
+
+**Run it**:   
+<pre>
+Chukwuemeka@Ubuntu:~$ ./2-print_alphabet
+abcdefghijklmnopqrstuvwxyz
+Chukwuemeka@Ubuntu:~$ _
+</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
