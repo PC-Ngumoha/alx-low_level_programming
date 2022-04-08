@@ -57,6 +57,19 @@ Chukwuemeka@Ubuntu:~$ echo $?
 0
 </pre>
 
+### 6-size.c
+When this programme is compiled and run, it will print out the sizes of various data types in the C programming language to the terminal. In order to use it, open a terminal:
+<pre>
+Chukwuemeka@Ubuntu:~$ gcc 6-size.c -o size64
+Chukwuemeka@Ubuntu:~$ ./size64
+Size of a char: 1 byte (s)
+Size of an int: 4 byte (s)
+Size of a long int: 8 byte (s)
+Size of a long long int: 8 byte (s)
+Size of a float: 4 byte (s)
+Chukwuemeka@Ubuntu:~$ 
+</pre>
+
 
 
 
