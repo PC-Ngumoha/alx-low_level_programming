@@ -39,6 +39,16 @@ Chukwuemeka@Ubuntu:~$
 </pre>
 
 
+### 4-puts.c 
+This will when compiled and run, will print a message to the terminal using the puts() functions. In order to use this program, we need to type:
+<pre>
+Chukwuemeka@Ubuntu:~$ gcc -Wall -Werror -Wextrat -pedantic -std=gnu89 4-puts.c && ./a.out
+"Programming is like building a multilingual puzzle
+Chukwuemeka@Ubuntu:~$ echo $?
+0
+</pre>
+
+
 
 
 
