@@ -48,6 +48,17 @@ Chukwuemeka@Ubuntu:~$ echo $?
 0
 </pre>
 
+### 5-printf.c
+When this programme is compiled and run, it will display the message `with proper grammar, but the outcome is a piece of art`. In order to use this program, we need to type in the following: 
+<pre>
+Chukwuemeka@Ubuntu:~$ gcc -Wall -Werror -Wextrat -pedantic -std=gnu89 4-puts.c && ./a.out
+with proper grammar, but the outcome is a piece of art,
+Chukwuemeka@Ubuntu:~$ echo $?
+0
+</pre>
+
+
+
 
 
 
