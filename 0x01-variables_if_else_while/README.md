@@ -68,6 +68,20 @@ abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ$
 Chukwuemeka@Ubuntu:~$ _
 </pre>
 
+### 4-print_alphabt.c
+When this program is compiled and run, it will print all the characters of the english alphabet except `e` and `q` (all lowercase) to the terminal. In order to use it: 
+
+**Compile it** : 
+<pre>
+Chukwuemeka@Ubuntu:~$ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 4-print_alphabt.c -o 4-print_alphabt
+</pre>
+
+**Run it**:   
+<pre>
+Chukwuemeka@Ubuntu:~$ ./4-print_alphabt
+abcdfghijklmnoprstuvwxyz
+Chukwuemeka@Ubuntu:~$ _
+</pre>
 
 
 
