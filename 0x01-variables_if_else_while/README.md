@@ -53,6 +53,22 @@ abcdefghijklmnopqrstuvwxyz
 Chukwuemeka@Ubuntu:~$ _
 </pre>
 
+### 3-print_alphabets.c
+When this program is compiled and run, it will print all the characters of the english alphabet twice. First, with all letters in their lowercase form, then again with all letters in uppercase form. Then it will print a newline. In order to use the program:
+
+**Compile it** : 
+<pre>
+Chukwuemeka@Ubuntu:~$ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 3-print_alphabets.c -o 3-print_alphabets
+</pre>
+
+**Run it**:   
+<pre>
+Chukwuemeka@Ubuntu:~$ ./3-print_alphabets | cat -e
+abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ$
+Chukwuemeka@Ubuntu:~$ _
+</pre>
+
+
 
 
 
