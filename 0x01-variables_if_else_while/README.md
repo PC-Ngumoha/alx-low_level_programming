@@ -98,6 +98,20 @@ Chukwuemeka@Ubuntu:~$ ./5-print_numbers
 Chukwuemeka@Ubuntu:~$ _
 </pre>
 
+### 6-print_numberz.c
+When this program is compiled and run, it will print all the numbers of the decimal number system to the terminal and then it will print a newline character. In order to use it: 
+
+**Compile it** : 
+<pre>
+Chukwuemeka@Ubuntu:~$ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 6-print_numberz.c -o 6-print_numberz
+</pre>
+
+**Run it**:   
+<pre>
+Chukwuemeka@Ubuntu:~$ ./6-print_numberz
+0123456789
+Chukwuemeka@Ubuntu:~$ _
+</pre>
 
 
 
