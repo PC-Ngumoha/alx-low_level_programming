@@ -4,7 +4,8 @@
  *main - program entry point
  *
  *Description: This program prints a comma seperated list of
- *double-digit decimal numbers to the terminal.
+ *all possible combinations of double-digit decimal numbers
+ *to the terminal.
  *Return: 0 (Successful)
  */
 int main(void)
