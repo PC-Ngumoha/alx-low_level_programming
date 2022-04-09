@@ -113,7 +113,7 @@ Chukwuemeka@Ubuntu:~$ ./6-print_numberz
 Chukwuemeka@Ubuntu:~$ _
 </pre>
 
-### 7-print_tebhapla.c
+### 7-print_tebahpla.c
 
 When this program is compiled and run, it will print all the letters of the english alphabet in reverse order to the terminal and then it will print a newline character. In order to use it: 
 
