@@ -129,6 +129,21 @@ zyxwvutsrqponmlkjihgfedcba
 Chukwuemeka@Ubuntu:~$ _
 </pre>
 
+### 8-print_base16.c
+
+When this program is compiled and run, it will print all the numbers of the hexadecimal number system in lowercase to the terminal and then it will print a newline. In order to use it: 
+
+**Compile it** : 
+<pre>
+Chukwuemeka@Ubuntu:~$ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 8-print_base16.c -o 8-print_base16
+</pre>
+
+**Run it**:   
+<pre>
+Chukwuemeka@Ubuntu:~$ ./8-print_base16
+0123456789abcdef
+Chukwuemeka@Ubuntu:~$ _
+</pre>
 
 
 
