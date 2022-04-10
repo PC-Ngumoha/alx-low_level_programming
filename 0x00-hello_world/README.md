@@ -71,7 +71,14 @@ Chukwuemeka@Ubuntu:~$
 </pre>
 
 
+## Advanced Scripts
 
+### 100-intel
+When this script is run, it will convert the code contained in the source file stored in the `CFILE` global variable into assembly language and store the resulting assembly code into another file with the `.s` extension. In order to run this script: 
+<pre>
+Chukwuemeka@Ubuntu:~$ ./100-intel
+Chukwuemeka@Ubuntu:~$ _
+</pre>
 
 
 
