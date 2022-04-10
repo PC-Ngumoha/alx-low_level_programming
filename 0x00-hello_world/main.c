@@ -7,6 +7,7 @@
  */
 int main(void)
 {
+	puts("Holberton School");
 	return (0);
 }
 
