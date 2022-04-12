@@ -244,6 +244,45 @@ Chukwuemeka@Ubuntu:~$ ./6-abs
 Chukwuemeka@Ubuntu:~$ _
 </pre>
 
+### 7-print_last_digit.c
+When the function is compiled and run, the function will take a number `n` as it's argument Then the function will print the last digit of `n` to the terminal and return same. In order to use it:
+
+**Compile It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 _putchar.c main.c 7-print_last_digit.c -o 7-last_digit
+</pre>
+
+open the main.c file and enter the following code (in order to test the function):
+<pre>
+ #include "main.h"
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    int r;
+
+    print_last_digit(98);
+    print_last_digit(0);
+    r = print_last_digit(-1024);
+    _putchar('0' + r);
+    _putchar('\n');
+    return (0);
+}
+</pre>
+
+and then:
+
+**Run It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ ./7-last_digit
+8044
+Chukwuemeka@Ubuntu:~$ _
+</pre>
+
 
 
 
