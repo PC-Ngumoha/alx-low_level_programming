@@ -102,7 +102,46 @@ Chukwuemeka@Ubuntu:~$ _
 </pre>
 
 
+### 4-isalpha.c
+When this function is called with a character passed into it as an argument, the function will determine if the character is a letter of the english alphabet. If the character is a letter of the english alphabet, the function returns `1` (true). If not, the function returns `0` (false). In order to use the program:
 
+**Compile It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 _putchar.c main.c 4-isalpha.c -o 4-isalpha
+</pre>
+
+Open your main.c file and type the following code (in order to test the function)
+<pre>
+ #include "main.h"
+
+/**
+ * main - check the code.
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    int r;
+
+    r = _isalpha('H');
+    _putchar(r + '0');
+    r = _isalpha('o');
+    _putchar(r + '0');
+    r = _isalpha(108);
+    _putchar(r + '0');
+    r = _isalpha(';');
+    _putchar(r + '0');
+    _putchar('\n');
+    return (0);
+}
+</pre>
+
+**Run It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ ./4-isalpha
+1110
+Chukwuemeka@Ubuntu:~$ _
+</pre>
 
 
 
