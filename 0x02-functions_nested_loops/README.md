@@ -199,9 +199,50 @@ Chukwuemeka@Ubuntu:~$ ./5-sign
 -, /
 </pre>
 
+### 6-abs.c
+When this function is compiled and run, the function takes a number as it's argument and the function returns the absolute value of the integer that is passed into it as it's parameter. The absolute value for a number `n` is defined for `n > 0` as `n` and `n < 0` as `-n` where `-n` is the sign inversion of the number `n`. In order to use this program:
 
+**Compile It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 _putchar.c main.c 6-abs.c -o 6-abs
+</pre>
 
+open your main.c file, and type the following code into it (to test the function):
+<pre>
+ #include "main.h"
+ #include <stdio.h>
 
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    int r;
+
+    r = _abs(-1);
+    printf("%d\n", r);
+    r = _abs(0);
+    printf("%d\n", r);
+    r = _abs(1);
+    printf("%d\n", r);
+    r = _abs(-98);
+    printf("%d\n", r);
+    return (0);
+}
+</pre>
+and then :
+
+**Run It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ ./6-abs
+1
+0
+1
+98
+Chukwuemeka@Ubuntu:~$ _
+</pre>
 
 
 
