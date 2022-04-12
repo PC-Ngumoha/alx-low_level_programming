@@ -283,6 +283,59 @@ Chukwuemeka@Ubuntu:~$ ./7-last_digit
 Chukwuemeka@Ubuntu:~$ _
 </pre>
 
+### 8-24_hours.c
+When this program is compiled and run, the function prints jack bauer's minutes for a 24-hour day to the terminal starting from `00:00` and ending at `23:59`. In order to run the code:
+
+**Compile It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 _putchar.c main.c 8-24_hours.c -o 8-24
+</pre>
+
+open up the main.c file, and type the following code to test the function:
+
+<pre>
+ #include "main.h"
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    jack_bauer();
+    return (0);
+}
+</pre>
+
+**Run It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ ./8-24 | head
+00:00
+00:01
+00:02
+00:03
+00:04
+00:05
+00:06
+00:07
+00:08
+00:09
+Chukwuemeka@Ubuntu:~$ ./8-24 | tail
+23:50
+23:51
+23:52
+23:53
+23:54
+23:55
+23:56
+23:57
+23:58
+23:59
+Chukwuemeka@Ubuntu:~$ ./8-24 | wc -l
+1440
+</pre>
+
 
 
 
