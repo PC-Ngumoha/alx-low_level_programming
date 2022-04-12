@@ -144,6 +144,60 @@ Chukwuemeka@Ubuntu:~$ _
 </pre>
 
 
+### 5-sign.c
+When this function is called with an integer number passed to it as an argument, then the function determines the sign of the number and prints it and then returns a code to designate which kind of number. i.e If the number is greater than zero, the function prints `+` and returns `1`. If equal to zero, the functions prints `0` and returns `0`. If less than zero, the functions prints `-` and returns `-1`. In order to use this program:
+
+**Compile It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 _putchar.c main.c 5-sign.c -o 5-sign
+</pre>
+
+open up the main.c file and type the following code inside it (to test the function):
+<pre>
+ #include "main.h"
+
+/**
+ * main - check the code.
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    int r;
+
+    r = print_sign(98);
+    _putchar(',');
+    _putchar(' ');
+    _putchar(r + '0');
+    _putchar('\n');
+    r = print_sign(0);
+    _putchar(',');
+    _putchar(' ');
+    _putchar(r + '0');
+    _putchar('\n');
+    r = print_sign(0xff);
+    _putchar(',');
+    _putchar(' ');
+    _putchar(r + '0');
+    _putchar('\n');
+    r = print_sign(-1);
+    _putchar(',');
+    _putchar(' ');
+    _putchar(r + '0');
+    _putchar('\n');
+    return (0);
+}
+</pre>
+and then:
+
+**Run It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ ./5-sign
++, 1
+0, 0
++, 1
+-, /
+</pre>
 
 
 
