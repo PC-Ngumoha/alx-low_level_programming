@@ -13,7 +13,9 @@ int print_last_digit(int n)
 {
 	if (n < 0)
 	{
-		int temp = n == INT_MIN? - (INT_MIN + 1) : -n;
+		unsigned int temp = n == INT_MIN ? ((unsigned int)-(INT_MIN + 1)) + 1U
+			: (unsigned int) -n;
+
 		_putchar('0' + (temp % 10));
 		return (temp % 10);
 	}
