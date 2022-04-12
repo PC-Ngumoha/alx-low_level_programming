@@ -39,7 +39,7 @@ When this function is compiled and run, It will print all the letters of the eng
 
 **Compile It:**
 <pre>
-Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 _putchar.c 2-main.c 2-print_alphabet_x10.c -o 2-alphabet_x10
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 _putchar.c main.c 2-print_alphabet_x10.c -o 2-alphabet_x10
 </pre>
 
 **Run It:**
@@ -58,6 +58,48 @@ abcdefghijklmnopqrstuvwxyz
 Chukwuemeka@Ubuntu:~$ _
 </pre>
 
+
+### 3-islower.c
+When this function is called with a character being passed as an argument, It will determine if the character is a lowercase character or not and return either `1` (if it is a lowercase) or `0` (If it is not a lowercase). In order to use this program:
+
+**Compile It:**
+
+<pre>
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 _putchar.c main.c 3-islower.c -o 3-islower
+</pre>
+
+If you open up your main.c file and input the following code (to test the function):
+
+<pre>
+ #include "main.h"
+
+ /**
+  * main - check the code.
+  *
+  * Return: Always 0.
+  */
+ int main(void)
+ {
+     int r;
+
+     r = _islower('H');
+     _putchar(r + '0');
+     r = _islower('o');
+     _putchar(r + '0');
+     r = _islower(108);
+     _putchar(r + '0');
+     _putchar('\n');
+     return (0);
+ }
+</pre>
+and then:
+
+**Run It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ ./3-islower
+011
+Chukwuemeka@Ubuntu:~$ _
+</pre>
 
 
 
