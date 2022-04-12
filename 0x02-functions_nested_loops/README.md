@@ -19,3 +19,18 @@ _putchar
 Chukwuemeka@Ubuntu:~$ _
 </pre>
 
+### 1-alphabet.c
+When this function is compiled and run, It will print all the letters of the english alphabet in lowercase to the terminal followed by a newline. In order to run this program:
+
+**Compile It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 _putchar.c main.c 1-alphabet.c -o 1-alphabet
+</pre>
+
+**Run It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ ./1-alphabet
+abcdefghijklmnopqrstuvwxyz
+Chukwuemeka@Ubuntu:~$ _
+</pre>
+
