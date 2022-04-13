@@ -390,6 +390,41 @@ Chukwuemeka@Ubuntu:~$ _
 </pre>
 
 
+### 10-add.c
+When this program is compiled and run, the function will take two integers as arguments and will return the sum of these integers. In order to use this program :
+
+**Compile It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 _putchar.c main.c 10-add.c -o 10-add
+</pre>
+
+open your main.c file, and type in the following code in order to test our function:
+<pre>
+ #include "main.h"
+ #include <stdio.h>
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    int n;
+
+    n = add(89, 9);
+    printf("%d\n", n);
+    return (0);
+}
+</pre>
+
+**Run It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ ./10-add
+98
+Chukwuemeka@Ubuntu:~$ _
+</pre>
+
 
 
 
