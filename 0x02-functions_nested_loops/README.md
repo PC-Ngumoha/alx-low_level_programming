@@ -337,6 +337,57 @@ Chukwuemeka@Ubuntu:~$ ./8-24 | wc -l
 </pre>
 
 
+### 9-times_table.c
+When this program is compiled and run, it will print a 9x9 multiplication table to the terminal. In order to use this program: 
+
+**Compile It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 _putchar.c main.c 9-times_table.c -o 9-times_table
+</pre>
+
+open the main.c file and type in the following code in order to test the function:
+
+<pre>
+ #include "main.h"
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    times_table();
+    return (0);
+}
+</pre>
+
+**Run It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ ./9-times_table | cat -e
+0,  0,  0,  0,  0,  0,  0,  0,  0,  0$
+0,  1,  2,  3,  4,  5,  6,  7,  8,  9$
+0,  2,  4,  6,  8, 10, 12, 14, 16, 18$
+0,  3,  6,  9, 12, 15, 18, 21, 24, 27$
+0,  4,  8, 12, 16, 20, 24, 28, 32, 36$
+0,  5, 10, 15, 20, 25, 30, 35, 40, 45$
+0,  6, 12, 18, 24, 30, 36, 42, 48, 54$
+0,  7, 14, 21, 28, 35, 42, 49, 56, 63$
+0,  8, 16, 24, 32, 40, 48, 56, 64, 72$
+0,  9, 18, 27, 36, 45, 54, 63, 72, 81$
+Chukwuemeka@Ubuntu:~$ ./9-times_table | tr ' ' . | cat -e
+0,..0,..0,..0,..0,..0,..0,..0,..0,..0$
+0,..1,..2,..3,..4,..5,..6,..7,..8,..9$
+0,..2,..4,..6,..8,.10,.12,.14,.16,.18$
+0,..3,..6,..9,.12,.15,.18,.21,.24,.27$
+0,..4,..8,.12,.16,.20,.24,.28,.32,.36$
+0,..5,.10,.15,.20,.25,.30,.35,.40,.45$
+0,..6,.12,.18,.24,.30,.36,.42,.48,.54$
+0,..7,.14,.21,.28,.35,.42,.49,.56,.63$
+0,..8,.16,.24,.32,.40,.48,.56,.64,.72$
+0,..9,.18,.27,.36,.45,.54,.63,.72,.81$
+Chukwuemeka@Ubuntu:~$ _
+</pre>
 
 
 
