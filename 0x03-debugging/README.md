@@ -11,3 +11,20 @@ Chukwuemeka@Ubuntu:~$ wc -l 0-main.c
 16 0-main.c
 Chukwuemeka@Ubuntu:~$ _
 </pre>
+
+### 1-main.c
+This is a program that originally compiled and produced a function that is designed to create an infinite loop. On commenting out some of the lines of code in the file, the infinite loop has been avoided. In order to check this program out: 
+**Compile It**
+<pre>
+Chukwuemeka@Ubuntu:~$ gcc -std=gnu89 1-main.c -o 1-main
+</pre>
+
+**Run It**
+<pre>
+Chukwuemeka@Ubuntu:~$ ./1-main
+Infinite loop incoming :(
+Infinite loop avoided! \o/
+Chukwuemeka@Ubuntu:~$ wc -l 1-main.c
+24 1-main.c
+Chukwuemeka@Ubuntu:~$ _
+</pre>
