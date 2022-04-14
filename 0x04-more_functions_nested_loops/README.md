@@ -79,6 +79,40 @@ Chukwuemeka@Ubuntu:~$ _
 </pre>
 
 
+### 2-mul.c
+This program contains the user-defined function `mul` which takes in two integers as arguments and then calculates and returns the product of the two integers passed. In order to use this program:
+
+**Compile It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 2-main.c 2-mul.c -o 2-mul
+</pre>
+
+open up the `2-main.c` and type the following code into it, to test the function:
+<pre>
+ #include "main.h"
+ #include <stdio.h>
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    printf("%d\n", mul(98, 1024));
+    printf("%d\n", mul(-402, 4096));
+    return (0);
+}
+</pre>
+
+**Run It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ ./2-mul
+100352
+-1646592
+Chukwuemeka@Ubuntu:~$ _
+</pre>
+
 
 
 
