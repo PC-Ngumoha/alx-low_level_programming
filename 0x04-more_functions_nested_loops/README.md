@@ -215,7 +215,42 @@ Chukwuemeka@Ubuntu:~$ ./5-more_numbers
 Chukwuemeka@Ubuntu:~$ _
 </pre>
 
+### 6-print_line.c
+This program contains the user-defined function `print_line` which takes an integer `n` and uses the '_' character to print a line on the screen. Essentially, `n` tells the function the number of times to repeatedly print '_' to the screen. In order to use this program:
 
+**Compile It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 _putchar.c 6-main.c 6-print_line.c -o 6-lines
+</pre>
+
+Open the `6-main.c` file and type the following code into it in order to test the function:
+<pre>
+ #include "main.h"
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    print_line(0);
+    print_line(2);
+    print_line(10);
+    print_line(-4);
+    return (0);
+}
+</pre>
+
+**Run It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ ./6-lines | cat -e
+$
+__$
+__________$
+$
+Chukwuemeka@Ubuntu:~$ _
+</pre>
 
 
 
