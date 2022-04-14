@@ -175,7 +175,45 @@ Chukwuemeka@Ubuntu:~$ ./4-print_most_numbers
 Chukwuemeka@Ubuntu:~$ _
 </pre>
 
+### 5-more_numbers.c
+This program contains the user-defined function `more_numbers` which prints numbers from `0` to `14` to the terminal ten times. In order to use this program:
 
+**Compile It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 _putchar.c 5-main.c 5-more_numbers.c -o 5-more_numbers
+</pre>
+
+open up your `5-main.c` file and type in the following code to test the function:
+<pre>
+ #include "main.h"
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    more_numbers();
+    return (0);
+}
+</pre>
+
+**Run It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ ./5-more_numbers
+01234567891011121314
+01234567891011121314
+01234567891011121314
+01234567891011121314
+01234567891011121314
+01234567891011121314
+01234567891011121314
+01234567891011121314
+01234567891011121314
+01234567891011121314
+Chukwuemeka@Ubuntu:~$ _
+</pre>
 
 
 
