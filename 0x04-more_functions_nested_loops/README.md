@@ -144,7 +144,36 @@ Chukwuemeka@Ubuntu:~$ ./3-print_numbers | cat -e
 Chukwuemeka@Ubuntu:~$ _
 </pre>
 
+### 4-print_most_numbers
+This program contains the user-defined function `print_most_numbers` which prints numbers from `0` to `9` excluding `2` and `4` to the terminal. In order to use this:
 
+**Compile It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 _putchar.c 4-main.c 4-print_most_numbers.c -o 4-print_most_numbers
+</pre>
+
+open the `4-main.c` file and type the following code into it in order to test the function:
+<pre>
+ #include "main.h"
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    print_most_numbers();
+    return (0);
+}
+</pre>
+
+**Run It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ ./4-print_most_numbers
+01356789
+Chukwuemeka@Ubuntu:~$ _
+</pre>
 
 
 
