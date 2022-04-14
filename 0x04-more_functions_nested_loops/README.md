@@ -113,6 +113,37 @@ Chukwuemeka@Ubuntu:~$ ./2-mul
 Chukwuemeka@Ubuntu:~$ _
 </pre>
 
+### 3-print_numbers.c
+This program contains the user-defined function `print_numbers` which prints out numbers from `0` to `9` to the terminal. In order to use it:
+
+**Compile It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 _putchar.c 3-main.c 3-print_numbers.c -o 3-print_numbers
+</pre>
+
+open up the `3-main.c` file and enter the following code in order to test the function:
+<pre>
+ #include "main.h"
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    print_numbers();
+    return (0);
+}
+</pre>
+
+**Run It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ ./3-print_numbers | cat -e
+0123456789$
+Chukwuemeka@Ubuntu:~$ _
+</pre>
+
 
 
 
