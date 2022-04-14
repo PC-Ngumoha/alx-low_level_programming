@@ -252,7 +252,52 @@ $
 Chukwuemeka@Ubuntu:~$ _
 </pre>
 
+### 7-print_diagonal.c
+This program contains the user-defined function `print_diagonal` which takes an integer number `n` and then uses that integer to determine how many times the character `\` will be repeated. In order to use it:
 
+**Compile It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 _putchar.c 7-main.c 7-print_diagonal.c -o 7-diagonals
+</pre>
+
+Open the `7-main.c` file and type the following into your code:
+<pre>
+ #include "main.h"
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    print_diagonal(0);
+    print_diagonal(2);
+    print_diagonal(10);
+    print_diagonal(-4);
+    return (0);
+}
+</pre>
+
+**Run It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ ./7-diagonals | cat -e
+$
+\$
+ \$
+\$
+ \$
+  \$
+   \$
+    \$
+     \$
+      \$
+       \$
+        \$
+         \$
+$
+Chukwuemeka@Ngumoha:~$ _
+</pre>
 
 
 
