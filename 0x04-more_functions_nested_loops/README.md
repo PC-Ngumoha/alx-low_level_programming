@@ -40,6 +40,45 @@ a: 0
 Chukwuemeka@Ubuntu:~$ _
 </pre>
 
+### 1-isdigit.c
+This program contains the user-defined function `_isdigit` which takes a single character `c` and determines if the character is a digit or not. In order to make use of this program:
+
+**Compile It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 1-main.c 1-isdigit.c -o 1-isdigit
+</pre> 
+
+open the `1-main.c` file and type in the following code in order to test the function:
+<pre>
+ #include "main.h"
+ #include <stdio.h>
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    char c;
+
+    c = '0';
+    printf("%c: %d\n", c, _isdigit(c));
+    c = 'a';
+    printf("%c: %d\n", c, _isdigit(c));
+    return (0);
+}
+</pre>
+
+**Run It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ ./1-isdigit
+0: 1
+a: 0
+Chukwuemeka@Ubuntu:~$ _
+</pre>
+
+
 
 
 
