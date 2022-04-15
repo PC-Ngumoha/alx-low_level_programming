@@ -1,26 +1,11 @@
 #include <stdio.h>
 
-void fizz_buzz(void);
-
 /**
- * main - Used to test the fizz_buzz function
- *
- * Return: Always 0
- */
-int main(void)
-{
-	fizz_buzz();
-
-	return (0);
-}
-
-
-/**
- * fizz_buzz - simple FIZZBUZZ program
+ * main - simple FIZZBUZZ program
  *
  * Return: Void
  */
-void fizz_buzz(void)
+int main(void)
 {
 	int i;
 
@@ -47,4 +32,6 @@ void fizz_buzz(void)
 		i++;
 	}
 	printf("\n");
+
+	return (0);
 }
