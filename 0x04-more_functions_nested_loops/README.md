@@ -359,6 +359,66 @@ Chukwuemeka@Ubuntu:~$ ./9-fizz_buzz
 Chukwuemeka@Ubuntu:~$ _ 
 </pre>
 
+### 10-print_triangle.c
+This program contains the user-defined function `print_triangle` which gets an integer argument called `size` and uses this `size` to determine how many `#` and spaces per line and how many lines to print in order to print a triangle to the terminal. In order to use this program:
+
+open up your `10-main.c` and type in the following code :
+<pre>
+ #include "main.h"
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    print_triangle(2);
+    print_triangle(10);
+    print_triangle(1);
+    print_triangle(0);
+    return (0);
+}
+</pre>
+
+**Compile It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 _putchar.c 10-main.c 10-print_triangle.c -o 10-triangles
+</pre>
+
+**Run It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ ./10-triangles
+  #
+ ##
+          #
+         ##
+        ###
+       ####
+      #####
+     ######
+    #######
+   ########
+  #########
+ ##########
+ #
+Chukwuemeka@Ubuntu:~$ ./10-triangles | tr ' ' . | cat -e
+ .#$
+ ##$
+ .........#$
+ ........##$
+ .......###$
+ ......####$
+ .....#####$
+ ....######$
+ ...#######$
+ ..########$
+ .#########$
+ ##########$
+ #$
+ $
+Chukwuemeka@Ubuntu:~$ _
+</pre>
 
 
 
