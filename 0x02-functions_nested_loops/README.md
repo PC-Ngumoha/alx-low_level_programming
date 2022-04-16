@@ -556,7 +556,20 @@ $
 Chukwuemeka@Ubuntu:~$ _
 </pre>
 
+### 101-natural.c
+This program when compiled and run, will calculate the sum of all the numbers which are multiples of `3` and `5` from `0` to `1024` (excluded). In order to use the program :
 
+**Compile It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ gcc 101-natural.c -o 101-natural
+</pre>
+
+**Run It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ ./101-natural
+244293
+Chukwuemeka@Ubuntu:~$ _
+</pre>
 
 
 

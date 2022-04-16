@@ -2,19 +2,16 @@
 #include "main.h"
 
 /***/
-void print_sum_of_multiples(void)
+int main(void)
 {
 	int n;
 	int total;
 
 	n = 0;
+	total = 0;
 	while (n < 1024)
 	{
-		if ((n % 3 == 0) && (n % 5 == 0))
-		{
-			total += n;
-		}
-		else if (n % 3 == 0)
+		if (n % 3 == 0)
 		{
 			total += n;
 		}
