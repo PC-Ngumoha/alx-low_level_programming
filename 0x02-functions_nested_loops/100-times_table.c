@@ -1,5 +1,6 @@
 #include "main.h"
 
+void _print_values(int);
 
 /**
  * print_times_table - prints nxn times table
@@ -24,30 +25,15 @@ void print_times_table(int n)
 
 				if (temp / 100)
 				{
-					int num1;
-					int num2;
-					int num3;
-
-					num1 = temp / 100;
-					num2 = (temp % 100) / 10;
-					num3 = temp % 10;
-					_putchar('0' + num1);
-					_putchar('0' + num2);
-					_putchar('0' + num3);
+					_print_values(temp);
 				}
 				else if (temp / 10)
 				{
-					int num1;
-					int num2;
-
-					num1 = temp / 10;
-					num2 = temp % 10;
 					if (j > 0)
 					{
 						_putchar(' ');
 					}
-					_putchar('0' + num1);
-					_putchar('0' + num2);
+					_print_values(temp);
 				}
 				else
 				{
@@ -56,7 +42,7 @@ void print_times_table(int n)
 						_putchar(' ');
 						_putchar(' ');
 					}
-					_putchar('0' + temp);
+					_print_values(temp);
 				}
 
 				if (j < n)
@@ -67,5 +53,48 @@ void print_times_table(int n)
 			}
 			_putchar('\n');
 		}
+	}
+}
+
+
+
+/**
+ * _print_values - prints numbers accurately
+ * @val: number to be parsed and printed
+ *
+ * Description: This function takes a number,
+ * parses that number and then prints it to the
+ * terminal. It can only parse and print numbers
+ * less than or up to three digits in length.
+ * Return: Void
+ */
+void _print_values(int val)
+{
+	if (val / 100)
+	{
+		int num1;
+		int num2;
+		int num3;
+
+		num1 = val / 100;
+		num2 = (val % 100) / 10;
+		num3 = val % 10;
+		_putchar('0' + num1);
+		_putchar('0' + num2);
+		_putchar('0' + num3);
+	}
+	else if (val / 10)
+	{
+		int num1;
+		int num2;
+
+		num1 = val / 10;
+		num2 = val % 10;
+		_putchar('0' + num1);
+		_putchar('0' + num2);
+	}
+	else
+	{
+		_putchar('0' + val);
 	}
 }
