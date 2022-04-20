@@ -293,7 +293,43 @@ Chukwuemeka@Ubuntu:~$ ./7-puts_half
 Chukwuemeka@Ubuntu:~$ 
 </pre>
 
+### 8-print_array.c
+This program contains a function `print_array` that takes two arguments, an array and the size of the array to be printed to the screen. In order to use it:
 
+Create the `8-main.c` and type the following code:
+<pre>
+ #include "main.h"
+
+/**
+ * main - check the code for
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    int array[5];
+
+    array[0] = 98;
+    array[1] = 402;
+    array[2] = -198;
+    array[3] = 298;
+    array[4] = -1024;
+    print_array(array, 5);
+    return (0);
+}
+</pre>
+
+**Compile It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 8-main.c 8-print_array.c -o 8-print_array
+</pre>
+
+**Run It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ ./8-print_array 
+98, 402, -198, 298, -1024
+Chukwuemeka@Ubuntu:~$ 
+</pre>
 
 
 
