@@ -225,6 +225,57 @@ loohcS yM
 Chukwuemeka@Ubuntu:~$ 
 </pre>
 
+### 6-puts2.c
+This program contains the function `puts2` which takes a string as an argument and prints out every odd numbered character to the screen while omitting even numbered characters from the numbers displayed. In order to use it:
+
+Create the `6-main.c` file and type the following code into it:
+<pre>
+ #include "main.h"
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    char *str;
+
+    str = "0123456789";
+    puts2(str);
+    return (0);
+}
+</pre>
+
+**Compile It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 _putchar.c 6-main.c 6-puts2.c -o 6-puts2
+</pre>
+
+**Run It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ ./6-puts2 
+02468
+Chukwuemeka@Ubuntu:~$ 
+</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
