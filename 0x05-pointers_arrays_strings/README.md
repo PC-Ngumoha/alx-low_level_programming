@@ -331,20 +331,43 @@ Chukwuemeka@Ubuntu:~$ ./8-print_array
 Chukwuemeka@Ubuntu:~$ 
 </pre>
 
+### 9-strcpy.c
+This program contains a function `_strcpy` which takes two strings `dest` and `src` as arguments and copies the contents of `src` into `dest` and then returns the address of `dest` back to the user of the program. In order to use it:
 
+Create the `9-main.c` and type the following code:
+<pre>
+ #include "main.h"
+ #include &lt;stdio.h&gt;
 
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    char s1[98];
+    char *ptr;
 
+    ptr = _strcpy(s1, "First, solve the problem. Then, write the code\n");
+    printf("%s", s1);
+    printf("%s", ptr);
+    return (0);
+}
+</pre>
 
+**Compile It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 9-main.c 9-strcpy.c -o 9-strcpy
+</pre>
 
-
-
-
-
-
-
-
-
-
+**Run It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ ./9-strcpy 
+First, solve the problem. Then, write the code
+First, solve the problem. Then, write the code
+Chukwuemeka@Ubuntu:~$ 
+</pre>
 
 
 
