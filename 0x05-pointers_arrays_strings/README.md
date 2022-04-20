@@ -259,6 +259,39 @@ Chukwuemeka@Ubuntu:~$ ./6-puts2
 Chukwuemeka@Ubuntu:~$ 
 </pre>
 
+### 7-puts_half.c
+This program contains a function `puts_half` which takes a string `str` as an argument and prints the second half of it to the screen. In order to use it:
+
+Create the `7-main.c` file and type the followuing code into it:
+<pre>
+ #include "main.h"
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    char *str;
+
+    str = "0123456789";
+    puts_half(str);
+    return (0);
+}
+</pre>	
+
+**Compile It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 _putchar.c 7-main.c 7-puts_half.c -o 7-puts_half
+</pre>
+
+**Run It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ ./7-puts_half 
+56789
+Chukwuemeka@Ubuntu:~$ 
+</pre>
 
 
 
