@@ -188,9 +188,42 @@ vomisA caasI - meht fo kcal eht raef I .sretupmoc raef ton od I
 Chukwuemeka@Ubuntu: 
 </pre>
 
+### 5-rev_string.c
+This program contains the function `rev_string` which takes a string as an argument and then reverses the characters in the string. In order to use It:
 
+Create the `5-main.c` file and type the following code:
+<pre>
+ #include "main.h"
+ #include &lt;stdio.h&gt;
 
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    char s[10] = "My School";
 
+    printf("%s\n", s);
+    rev_string(s);
+    printf("%s\n", s);
+    return (0);
+}
+</pre>
+
+**Compile It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 5-main.c 5-rev_string.c -o 5-rev_string
+</pre>
+
+**Run It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ ./5-rev_string 
+My School
+loohcS yM
+Chukwuemeka@Ubuntu:~$ 
+</pre>
 
 
 
