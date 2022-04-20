@@ -40,5 +40,65 @@ n=98
 Chukwuemeka@Ubuntu:~$ _
 </pre>
 
+### 1-swap.c
+This program contains a function `swap_int` which when compiled and run will take two pointers to integers `a` and `b` and swap the value of the variables to which they point from within the function. In order to use this program:
+
+Create the `1-main.c` file and type the code below into it:
+<pre>
+ #include "main.h"
+ #include &lt;stdio.h&gt;
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    int a;
+    int b;
+
+    a = 98;
+    b = 42;
+    printf("a=%d, b=%d\n", a, b);
+    swap_int(&a, &b);
+    printf("a=%d, b=%d\n", a, b);
+    return (0);
+}
+</pre>
+
+**Compile It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 1-main.c 1-swap.c -o 1-swap
+</pre>
+
+**Run It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ ./1-swap 
+a=98, b=42
+a=42, b=98
+Chukwuemeka@Ubuntu:~$ _
+</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
