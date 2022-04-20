@@ -119,6 +119,40 @@ Chukwuemeka@Ubuntu:~$
 </pre>
 
 
+### 3-puts.c
+This program contains a function `_puts` which takes a string as argument and prints the string out to the screen on call. In order to use it:
+
+Create the `3-main.c` and type:
+<pre>
+ #include "main.h"
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    char *str;
+
+    str = "I do not fear computers. I fear the lack of them - Isaac Asimov";
+    _puts(str);
+    return (0);
+}
+</pre>
+
+**Compile It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 _putchar.c 3-main.c 3-puts.c -o 3-puts
+</pre>
+
+**Run It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ ./3-puts 
+I do not fear computers. I fear the lack of them - Isaac Asimov
+Chukwuemeka@Ubuntu:~$ 
+</pre>
+
 
 
 
