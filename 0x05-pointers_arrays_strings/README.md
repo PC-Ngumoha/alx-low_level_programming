@@ -37,7 +37,7 @@ Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 0-main.c 0-
 Chukwuemeka@Ubuntu:~$ ./0-98 
 n=402
 n=98
-Chukwuemeka@Ubuntu:~$ _
+Chukwuemeka@Ubuntu:~$ 
 </pre>
 
 ### 1-swap.c
@@ -77,10 +77,46 @@ Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 1-main.c 1-
 Chukwuemeka@Ubuntu:~$ ./1-swap 
 a=98, b=42
 a=42, b=98
-Chukwuemeka@Ubuntu:~$ _
+Chukwuemeka@Ubuntu:~$ 
 </pre>
 
 
+### 2-strlen.c
+This program contains a function `_strlen` which when Compiled and run, will take a string `s` as argument and returns the length of the string as an integer value. In order to use it:
+
+Create the `2-main.c` file and type the following code into it:
+<pre>
+ #include "main.h"
+ #include &lt;stdio.h&gt;
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    char *str;
+    int len;
+
+    str = "My first strlen!";
+    len = _strlen(str);
+    printf("%d\n", len);
+    return (0);
+}
+</pre>	
+
+**Compile It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 2-main.c 2-strlen.c -o 2-strlen
+</pre>
+
+**Run It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ ./2-strlen 
+16
+Chukwuemeka@Ubuntu:~$ 
+</pre>
 
 
 
