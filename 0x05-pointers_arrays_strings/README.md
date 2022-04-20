@@ -154,9 +154,39 @@ Chukwuemeka@Ubuntu:~$
 </pre>
 
 
+### 4-print_rev.c
+This program contains a function `print_rev` which takes a string as an argument and prints that string out to the screen in reverse. In order to use it:
 
+Create the `4-main.c` file and type:
+<pre>
+ #include "main.h"
 
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    char *str;
 
+    str = "I do not fear computers. I fear the lack of them - Isaac Asimov";
+    print_rev(str);
+    return (0);
+}
+</pre>
+
+**Compile It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 _putchar.c 4-main.c 4-print_rev.c -o 4-print_rev
+</pre>
+
+**Run It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ ./4-print_rev 
+vomisA caasI - meht fo kcal eht raef I .sretupmoc raef ton od I
+Chukwuemeka@Ubuntu: 
+</pre>
 
 
 
