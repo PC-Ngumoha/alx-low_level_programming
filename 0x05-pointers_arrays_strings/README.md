@@ -8,7 +8,7 @@ This program contains a function which when compiled and run takes a pointer to 
 Create the `0-main.c` file and type the code below into it:
 <pre>
  #include "main.h"
- #include `<`stdio.h`>`
+ #include &lt;stdio.h&gt;
 
 /**
  * main - check the code 
