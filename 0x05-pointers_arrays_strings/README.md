@@ -369,8 +369,61 @@ First, solve the problem. Then, write the code
 Chukwuemeka@Ubuntu:~$ 
 </pre>
 
+### 100-atoi.c
+This program contains a function `_atoi` which takes a string, parses out the non-digit characters from the string and then returns an integer containing all the digit characters back to the user of the function. In order to use this program:
 
+Create the `100-main.c` file and type the following code into it:
+<pre>
+ #include "main.h"
+ #include &lt;stdio.h&gt;
 
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    int nb;
+
+    nb = _atoi("98");
+    printf("%d\n", nb);
+    nb = _atoi("-402");
+    printf("%d\n", nb);
+    nb = _atoi("          ------++++++-----+++++--98");
+    printf("%d\n", nb);
+    nb = _atoi("214748364");
+    printf("%d\n", nb);
+    nb = _atoi("0");
+    printf("%d\n", nb);
+    nb = _atoi("Suite 402");
+    printf("%d\n", nb);
+    nb = _atoi("         +      +    -    -98 Battery Street; San Francisco, CA 94111 - USA             ");
+    printf("%d\n", nb);
+    nb = _atoi("---++++ -++ Sui - te -   402 #cisfun :)");
+    printf("%d\n", nb);
+    return (0);
+}
+</pre>
+
+**Compile It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 -fsanitize=signed-integer-overflow 100-main.c 100-atoi.c -o 100-atoi
+</pre>
+
+**Run It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ ./100-atoi 
+98
+-402
+-98
+214748364
+0
+402
+98
+402
+Chukwuemeka@Ubuntu:~$ 
+<pre>
 
 
 
