@@ -369,6 +369,9 @@ First, solve the problem. Then, write the code
 Chukwuemeka@Ubuntu:~$ 
 </pre>
 
+## Advanced Programs
+
+
 ### 100-atoi.c
 This program contains a function `_atoi` which takes a string, parses out the non-digit characters from the string and then returns an integer containing all the digit characters back to the user of the function. In order to use this program:
 
