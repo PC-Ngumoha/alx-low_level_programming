@@ -47,6 +47,67 @@ Hello World!
 Chukwuemeka@Ubuntu:~$ 
 </pre>
 
+### 1-strncat.c
+This program contains a function `strncat` which when compiled and run will take two strings `dest` and `src` and an integer `n` as argument and will concatenate `n` number of characters from the `src` string argument to the `dest` string argument. In order to use this program:
+
+Create the `1-main.c` file and type the following code into it:
+<pre>
+ #include "main.h"
+ #include &lt;stdio.h&gt;
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    char s1[98] = "Hello ";
+    char s2[] = "World!\n";
+    char *ptr;
+
+    printf("%s\n", s1);
+    printf("%s", s2);
+    ptr = _strncat(s1, s2, 1);
+    printf("%s\n", s1);
+    printf("%s", s2);
+    printf("%s\n", ptr);
+    ptr = _strncat(s1, s2, 1024);
+    printf("%s", s1);
+    printf("%s", s2);
+    printf("%s", ptr);
+    return (0);
+}
+</pre>
+
+**Compile It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 1-main.c 1-strncat.c -o 1-strncat
+</pre>
+
+**Run It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ ./1-strncat 
+Hello 
+World!
+Hello W
+World!
+Hello W
+Hello WWorld!
+World!
+Hello WWorld!
+Chukwuemeka@Ubuntu:~$ 
+</pre>
+
+
+
+
+
+
+
+
+
+
 
 
 
