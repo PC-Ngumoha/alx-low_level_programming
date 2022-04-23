@@ -99,7 +99,79 @@ Hello WWorld!
 Chukwuemeka@Ubuntu:~$ 
 </pre>
 
+### 2-strncpy.c
+This program contains the function `strncpy` which takes two string arguments `dest` and `src` and an integer argument `n` and copies at most `n` number of characters from the `src` to the `dest` string argument. If `n` is greater than the length of the string to copy, then the function copies everything until it encounters an end of string or `\0` character. If not it copies at most `n` characters from the string `src` to the string `dest`. In order to use this program:
 
+Create the `2-main.c` file and type the following code into it:
+<pre>
+ #include "main.h"
+ #include &lt;stdio.h&gt;
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    char s1[98];
+    char *ptr;
+    int i;
+
+    for (i = 0; i < 98 - 1; i++)
+    {
+        s1[i] = '*';
+    }
+    s1[i] = '\0';
+    printf("%s\n", s1);
+    ptr = _strncpy(s1, "First, solve the problem. Then, write the code\n", 5);
+    printf("%s\n", s1);
+    printf("%s\n", ptr);
+    ptr = _strncpy(s1, "First, solve the problem. Then, write the code\n", 90);
+    printf("%s", s1);
+    printf("%s", ptr);
+    for (i = 0; i < 98; i++)
+    {
+        if (i % 10)
+        {
+            printf(" ");
+        }
+        if (!(i % 10) && i)
+        {
+            printf("\n");
+        }
+        printf("0x%02x", s1[i]);
+    }
+    printf("\n");
+    return (0);
+}
+</pre>
+
+**Compile It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 2-main.c 2-strncpy.c -o 2-strncpy
+</pre>
+
+**Run It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ ./2-strncpy 
+*************************************************************************************************
+First********************************************************************************************
+First********************************************************************************************
+First, solve the problem. Then, write the code
+First, solve the problem. Then, write the code
+0x46 0x69 0x72 0x73 0x74 0x2c 0x20 0x73 0x6f 0x6c
+0x76 0x65 0x20 0x74 0x68 0x65 0x20 0x70 0x72 0x6f
+0x62 0x6c 0x65 0x6d 0x2e 0x20 0x54 0x68 0x65 0x6e
+0x2c 0x20 0x77 0x72 0x69 0x74 0x65 0x20 0x74 0x68
+0x65 0x20 0x63 0x6f 0x64 0x65 0x0a 0x00 0x00 0x00
+0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00
+0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00
+0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00
+0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00
+0x2a 0x2a 0x2a 0x2a 0x2a 0x2a 0x2a 0x00
+Chukwuemeka@Ubuntu:~$ 
+</pre>
 
 
 
