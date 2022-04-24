@@ -273,6 +273,60 @@ Chukwuemeka@Ubuntu:~$ ./4-rev_array
 Chukwuemeka@Ubuntu:~$ 
 </pre>
 
+### 5-string_toupper.c
+This program contains the function `string_toupper` which takes a string `str` as argument, converts all the lowercase characters in the string to uppercase and then returns the modified string. In order to use this program:
+
+Create the `5-main.c` file and type the following code into it:
+<pre>
+ #include "main.h"
+ #include &lt;stdio.h&gt;
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    char str[] = "Look up!\n";
+    char *ptr;
+
+    ptr = string_toupper(str);
+    printf("%s", ptr);
+    printf("%s", str);
+    return (0);
+}
+</pre>
+
+**Compile It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 5-main.c 5-string_toupper.c -o 5-string_toupper
+</pre>
+
+**Run It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ ./5-string_toupper 
+LOOK UP!
+LOOK UP!
+Chukwuemeka@Ubuntu:~$ 
+</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
