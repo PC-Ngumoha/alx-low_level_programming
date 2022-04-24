@@ -311,6 +311,44 @@ LOOK UP!
 Chukwuemeka@Ubuntu:~$ 
 </pre>
 
+### 6-cap_string.c
+This program contains the function `cap_string` which takes a string `str` and Capitalizes every individual word within the string. In order to use this function:
+
+Create the `6-main.c` file and type the following code into it:
+<pre>
+ #include "main.h"
+ #include &lt;stdio.h&gt;
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    char str[] = "Expect the best. Prepare for the worst. Capitalize on what comes.\nhello world! hello-world 0123456hello world\thello world.hello world\n";
+    char *ptr;
+
+    ptr = cap_string(str);
+    printf("%s", ptr);
+    printf("%s", str);
+    return (0);
+}
+</pre>
+
+**Compile It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 6-main.c 6-cap_string.c -o 6-cap
+</pre>
+
+**Run It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ ./6-cap 
+Expect The Best. Prepare For The Worst. Capitalize On What Comes.
+Hello World! Hello-world 0123456hello World Hello World.Hello World
+Expect The Best. Prepare For The Worst. Capitalize On What Comes.
+Chukwuemeka@Ubuntu:~$ 
+</pre>
 
 
 
