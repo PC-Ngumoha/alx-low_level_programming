@@ -173,8 +173,44 @@ First, solve the problem. Then, write the code
 Chukwuemeka@Ubuntu:~$ 
 </pre>
 
+### 3-strcmp.c
+This program contains the function `_strcmp` which takes two strings `s1` and `s2` and compares the two strings character by character to determine if they are equal to each other or if one of them is greater than or less than the other. If both are a match, the function returns `0`. If one of them is greater than or less than the other, the function returns the difference `s1 - s2` which may result in a negative or a positive value depending on the respective magnitudes of `s1` and `s2`. In order to use the program:
 
+Create the `3-main.c` file and type the following code into it:
+<pre>
+ #include "main.h"
+ #include &lt;stdio.h&gt;
 
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    char s1[] = "Hello";
+    char s2[] = "World!";
+
+    printf("%d\n", _strcmp(s1, s2));
+    printf("%d\n", _strcmp(s2, s1));
+    printf("%d\n", _strcmp(s1, s1));
+    return (0);
+}
+</pre>
+
+**Compile It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 3-main.c 3-strcmp.c -o 3-strcmp
+</pre>
+
+**Run It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ ./3-strcmp
+-15
+15
+0
+Chukwuemeka@Ubuntu:~$ 
+</pre>
 
 
 
