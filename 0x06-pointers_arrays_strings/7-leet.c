@@ -8,30 +8,26 @@
  */
 char *leet(char *str)
 {
-	int i;
 
+	char *check;
+	char *replace;
+	int i;
+	int j;
+
+	check = "aeotl";
+	replace = "43071";
 	i = 0;
-	while (str[i] != '\0')
+	while (check[i] != '\0')
 	{
-		if (str[i] == 'a' || str[i] == 'A')
+		j = 0;
+		while (str[j] != '\0')
 		{
-			str[i] = '4';
-		}
-		else if (str[i] == 'e' || str[i] == 'E')
-		{
-			str[i] = '3';
-		}
-		else if (str[i] == 'o' || str[i] == 'O')
-		{
-			str[i] = '0';
-		}
-		else if (str[i] == 't' || str[i] == 'T')
-		{
-			str[i] = '7';
-		}
-		else if (str[i] == 'l' || str[i] == 'L')
-		{
-			str[i] = '1';
+			if (str[j] == check[i] || str[j] == (check[i] - 32))
+			{
+				str[j] = replace[i];
+			}
+
+			j++;
 		}
 
 		i++;
