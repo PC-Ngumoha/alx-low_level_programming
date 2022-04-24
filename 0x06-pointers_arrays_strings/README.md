@@ -350,7 +350,43 @@ Expect The Best. Prepare For The Worst. Capitalize On What Comes.
 Chukwuemeka@Ubuntu:~$ 
 </pre>
 
+### 7-leet.c
+This program contains a function `leet` which takes a string `str` as argument and encodes the string into `1337` format by replacing every occurence of `a` and `A` with `4`, `e` and `E` with `3`, `o` and `O` with `0`, `t` and `T` with `7`, and `l` and `L` with `1`. In order to use this program:
 
+Create the `7-main.c` file and type the following code into it:
+<pre>
+ #include "main.h"
+ #include &lt;stdio.h&gt;
+
+/**
+ * main - check the code for
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    char s[] = "Expect the best. Prepare for the worst. Capitalize on what comes.\n";
+    char *p;
+
+    p = leet(s);
+    printf("%s", p);
+    printf("%s", s);
+    return (0);
+}
+</pre>
+
+**Compile It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 7-main.c 7-leet.c -o 7-1337
+</pre>
+
+**Run It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ ./7-1337 
+3xp3c7 7h3 b3s7. Pr3p4r3 f0r 7h3 w0rs7. C4pi741iz3 0n wh47 c0m3s.
+3xp3c7 7h3 b3s7. Pr3p4r3 f0r 7h3 w0rs7. C4pi741iz3 0n wh47 c0m3s.
+Chukwuemeka@Ubuntu:~$ 
+</pre>
 
 
 
