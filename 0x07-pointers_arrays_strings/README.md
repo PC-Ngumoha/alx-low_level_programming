@@ -173,9 +173,45 @@ Chukwuemeka@Ubuntu:~$ ./1-memcpy
 Chukwuemeka@Ubuntu:~$ 
 </pre>
 
+### 2-strchr.c
+This program contains the function `_strchr` which takes a string `s` and a character `c` as arguments and then locates `c` in `s` and returns a pointer to `c` in the string `s` if located or returns `NULL` if not located. In order to use this program:
 
+Create the `2-main.c` file and type the following code into it:
+<pre>
+#include "main.h"
+#include &lt;stdio.h&gt;
 
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    char *s = "hello";
+    char *f;
 
+    f = _strchr(s, 'l');
+
+    if (f != NULL)
+    {
+        printf("%s\n", f);
+    }
+    return (0);
+}
+</pre> 
+
+**Compile It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 2-main.c 2-strchr.c -o 2-strchr
+</pre>
+
+**Run It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ ./2-strchr 
+llo
+Chukwuemeka@Ubuntu:~$ 
+</pre>
 
 
 
