@@ -12,7 +12,7 @@ void print_diagsums(int *a, int size)
 {
 	/*Variable Declaration*/
 	int i, j, k;
-	unsigned int sum1, sum2;
+	long sum1, sum2;
 
 	sum1 = 0;
 	sum2 = 0;
@@ -24,5 +24,5 @@ void print_diagsums(int *a, int size)
 		sum1 += *(a + size * i + j);
 		sum2 += *(a + size * i + k);
 	}
-	printf("%u, %u\n", sum1, sum2); /*Outputs sum*/
+	printf("%ld, %ld\n", sum1, sum2); /*Outputs sum*/
 }
