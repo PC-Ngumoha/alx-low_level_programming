@@ -9,13 +9,14 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	char *str1, *str2;
+	char *str1, *str2; /*Declaring Variables*/
 
 	while (*haystack != '\0')
 	{
-		str1 = haystack;
+		str1 = haystack;  /*Setting Values*/
 		str2 = needle;
 
+		/*While comparism is possible*/
 		while (*haystack != '\0' && *str2 != '\0' && *haystack == *str2)
 		{
 			haystack++;
@@ -24,7 +25,7 @@ char *_strstr(char *haystack, char *needle)
 		
 		if (*str2 == '\0')
 		{
-			return (str1);
+			return (str1); /*return pointer to location of haystack*/
 		}
 		haystack = str1 + 1;
 	}
