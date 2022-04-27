@@ -287,6 +287,42 @@ llo, world
 Chukwuemeka@Ubuntu:~$ 
 </pre>
 
+### 5-strstr.c
+This program contains a function `_strstr` which takes two arguments `haystack` and `needle` where `haystack` is the string within which we search for the first occurence of a substring and `needle` is the substring we search for. In order to use this program:
+
+Create the `5-main.c` file and type the following code into it:
+<pre>
+#include "main.h"
+#include &lt;stdio.h&gt;
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    char *s = "hello, world";
+    char *f = "world";
+    char *t;
+
+    t = _strstr(s, f);
+    printf("%s\n", t);
+    return (0);
+}
+</pre>
+
+**Compile It:**
+<pre>
+Chukwuemeka@Ubuntu:~$  gcc -Wall -pedantic -Werror -Wextra -std=gnu89 5-main.c 5-strstr.c -o 5-strstr
+</pre>
+
+**Run It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ ./5-strstr 
+world
+Chukwuemeka@Ubuntu:~$ 
+</pre>
 
 
 
