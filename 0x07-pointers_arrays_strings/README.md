@@ -419,7 +419,45 @@ Chukwuemeka@Ubuntu:~$ ./8-print_diagsums
 Chukwuemeka@Ubuntu:~$ 
 </pre>
 
+## Advanced Programs
 
+### 100-set_string.c
+This program contains a function `set_string` which takes two arguments ; a pointer to char string `s` and a striing `to`. This function changes the value of `s` to the value of `to`. In order to use this program:
+
+Create the `100-main.c` file and type the following code into it:
+<pre>
+#include "main.h"
+#include &lt;stdio.h&gt;
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    char *s0 = "Bob Dylan";
+    char *s1 = "Robert Allen";
+
+    printf("%s, %s\n", s0, s1);
+    set_string(&s1, s0);
+    printf("%s, %s\n", s0, s1);
+    return (0);
+}
+</pre>
+
+**Compile It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 100-main.c 100-set_string.c -o 100-set_string
+</pre>
+
+**Run It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ ./100-set_string 
+Bob Dylan, Robert Allen
+Bob Dylan, Bob Dylan
+Chukwuemeka@Ubuntu:~$ 
+</pre>
 
 
 
