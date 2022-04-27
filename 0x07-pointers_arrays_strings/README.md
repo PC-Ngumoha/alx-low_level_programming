@@ -213,6 +213,43 @@ llo
 Chukwuemeka@Ubuntu:~$ 
 </pre>
 
+### 3-strspn.c
+This program contains a function `_strspn` which takes two strings `s`  and `accept` and starts counting the number of characters in the initial segment of the substring of `s` are made up entirely of the bytes from the `accept` string. In order to use this program:
+
+Create the `3-main.c` file and input the following code into it:
+<pre>
+#include "main.h"
+#include &lt;stdio.h&gt;
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    char *s = "hello, world";
+    char *f = "oleh";
+    unsigned int n;
+
+    n = _strspn(s, f);
+    printf("%u\n", n);
+    return (0);
+}
+</pre>
+
+**Compile It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 3-main.c 3-strspn.c -o 3-strspn
+</pre>
+
+**Run It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ ./3-strspn 
+5
+Chukwuemeka@Ubuntu:~$ 
+</pre>
+
 
 
 
