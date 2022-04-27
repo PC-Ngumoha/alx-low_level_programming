@@ -8,11 +8,11 @@
  */
 void print_chessboard(char (*a)[8])
 {
-	int i;
-	int j;
+	/*Declaring Variables*/
+	int i, j;
 
 	i = 0;
-	while (i < 8)
+	while (i < 8) /*Repetition*/
 	{
 		j = 0;
 		while (j < 8)
@@ -21,8 +21,8 @@ void print_chessboard(char (*a)[8])
 			_putchar(temp);
 			j++;
 		}
-		_putchar('\n');
-		i++;
+		_putchar('\n'); /*Print Newline*/
+		i++; /*i + 1*/
 	}
 }
 
