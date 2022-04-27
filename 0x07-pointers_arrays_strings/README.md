@@ -324,6 +324,59 @@ world
 Chukwuemeka@Ubuntu:~$ 
 </pre>
 
+### 7-print_chessboard.c
+This program contains a function `print_chessboard` which takes a multidimensional array (Actually, an array of pointers) as argument and uses the information to print out a text-based version of a chess board with letters used like `r`, `k`, `b`, `q`, `R`, `K`, `B`, `Q` used to represent the rook, king, bishop and queen of each team respectively and `p` or `P` represent the pawns of each team. In order to use this program:
+
+Create the `7-main.c` file and type the following code into it:
+<pre>
+#include "main.h"
+#include &lt;stdio.h&gt;
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    char board[8][8] = {
+        {'r', 'k', 'b', 'q', 'k', 'b', 'k', 'r'},
+        {'p', 'p', 'p', 'p', 'p', 'p', 'p', 'p'},
+        {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+        {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+        {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+        {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+        {'P', 'P', 'P', 'P', 'P', 'P', 'P', 'P'},
+        {'R', 'K', 'B', 'Q', 'K', 'B', 'K', 'R'},
+    };
+    print_chessboard(board);
+    return (0);
+}
+</pre> 
+
+**Compile It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 _putchar.c 7-main.c 7-print_chessboard.c -o 7-print_chessboard
+</pre>
+
+**Run It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ ./7-print_chessboard 
+rkbqkbkr
+pppppppp
+
+
+
+
+PPPPPPPP
+RKBQKBKR
+Chukwuemeka@Ubuntu:~$ 
+</pre>
+
+
+
+
+
 
 
 
