@@ -250,6 +250,42 @@ Chukwuemeka@Ubuntu:~$ ./3-strspn
 Chukwuemeka@Ubuntu:~$ 
 </pre>
 
+### 4-strpbrk.c
+This program contains a function `4-strpbrk` which takes two strings `s` and `accept` which searches for the first occurence in `s` of any of the bytes from `accept` and returns a pointer to it. If not found, the function returns `NULL`. In order to use it:
+
+Create the `4-main.c` file and type the following code:
+<pre>
+#include "main.h"
+#include &lt;stdio.h&gt;
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    char *s = "hello, world";
+    char *f = "world";
+    char *t;
+
+    t = _strpbrk(s, f);
+    printf("%s\n", t);
+    return (0);
+}
+</pre>
+
+**Compile It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 4-main.c 4-strpbrk.c -o 4-strpbrk
+</pre>
+
+**Run It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ ./4-strpbrk 
+llo, world
+Chukwuemeka@Ubuntu:~$ 
+</pre>
 
 
 
