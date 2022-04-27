@@ -373,6 +373,51 @@ RKBQKBKR
 Chukwuemeka@Ubuntu:~$ 
 </pre>
 
+### 8-print_diagsums.c
+This program contains the function `print_diagsums` which takes a The pointer to the first element in the first child array of a 2D array (or square matrix) and from that pointer, it calculates the sum of the values of all the elements on each of the diagonals of the square matrix and prints the result to the screen. In order to use this program:
+
+Create the `8-main.c` file and type the following code into it:
+<pre>
+#include "main.h"
+#include &lt;stdio.h&gt;
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    int c3[3][3] = {
+        {0, 1, 5},
+        {10, 11, 12},
+        {1000, 101, 102},
+    };
+    int c5[5][5] = {
+        {0, 1, 5, 12124, 1234},
+        {10, 11, 12, 123521, 12512},
+        {1000, 101, 102, 12545, 214543435},
+        {100, 1012451, 11102, 12545, 214543435},
+        {10, 12401, 10452, 11542545, 1214543435},
+    };
+    print_diagsums((int *)c3, 3);
+    print_diagsums((int *)c5, 5);
+    return (0);
+}
+</pre> 
+
+**Compile It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 8-main.c 8-print_diagsums.c -o 8-print_diagsums
+</pre>
+
+**Run It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ ./8-print_diagsums 
+113, 1016
+1214556093, 1137318
+Chukwuemeka@Ubuntu:~$ 
+</pre>
 
 
 
