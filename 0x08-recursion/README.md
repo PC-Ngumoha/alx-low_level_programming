@@ -99,11 +99,50 @@ Chukwuemeka@Ubuntu:~$ ./2-strlen_recursion
 Chukwuemeka@Ubuntu:~$ 
 </pre>
 
+### 3-factorial.c
+This program contains a function `factorial` which takes an integer `n` as an argument and returns the factorial of that number. In order to use this program:
 
+Create the `3-main.c` file and type the following code into it:
+<pre>
+#include "main.h"
+#include &lt;stdio.h&gt;
 
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    int r;
 
+    r = factorial(1);
+    printf("%d\n", r);
+    r = factorial(5);
+    printf("%d\n", r);
+    r = factorial(10);
+    printf("%d\n", r);
+    r = factorial(-1024);
+    printf("%d\n", r);
+    return (0);
+}
 
+</pre>
 
+**Compile It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 3-main.c 3-factorial.c -o 3-factorial
+</pre>
+
+**Run It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ ./3-factorial 
+1
+120
+3628800
+-1
+Chukwuemeka@Ubuntu:$ 
+</pre>
 
 
 
