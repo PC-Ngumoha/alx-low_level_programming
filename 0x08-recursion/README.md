@@ -194,8 +194,55 @@ Chukwuemeka@Ubuntu:~$ ./4-pow
 Chukwuemeka@Ubuntu:~$ 
 </pre>
 
+### 5-sqrt_recursion.c
+This program contains the function `_sqrt_recursion` which takes the integer argument `n`, determines the natural square root of that number and returns the natural square root. In order to use this program:
 
+Create the `5-main.c` file and type the following code into it:
+<pre>
+#include "main.h"
+#include &lt;stdio.h&gt;
 
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    int r;
+
+    r = _sqrt_recursion(1);
+    printf("%d\n", r);
+    r = _sqrt_recursion(1024);
+    printf("%d\n", r);
+    r = _sqrt_recursion(16);
+    printf("%d\n", r);
+    r = _sqrt_recursion(17);
+    printf("%d\n", r);
+    r = _sqrt_recursion(25);
+    printf("%d\n", r);
+    r = _sqrt_recursion(-1);
+    printf("%d\n", r);
+    return (0);
+}
+</pre>
+
+**Compile It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 5-main.c 5-sqrt_recursion.c -o 5-sqrt	
+</pre>
+
+**Run It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ ./5-sqrt 
+1
+32
+4
+-1
+5
+-1
+Chukwuemeka@Ubuntu:~$ 
+</pre>
 
 
 
