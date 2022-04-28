@@ -144,7 +144,55 @@ Chukwuemeka@Ubuntu:~$ ./3-factorial
 Chukwuemeka@Ubuntu:$ 
 </pre>
 
+### 4-pow_recursion.c
+This program contains the function `_pow_recursion` which takes two integer arguments `x` and `y`. Where `x` is the base number and `y` is the exponent that we want to raise the base number to. In order to use this program:
 
+Create the `4-main.c` file and type the following code into it:
+<pre>
+#include "main.h"
+#include &lt;stdio.h&gt;
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    int r;
+
+    r = _pow_recursion(1, 10);
+    printf("%d\n", r);
+    r = _pow_recursion(1024, 0);
+    printf("%d\n", r);
+    r = _pow_recursion(2, 16);
+    printf("%d\n", r);
+    r = _pow_recursion(5, 2);
+    printf("%d\n", r);
+    r = _pow_recursion(5, -2);
+    printf("%d\n", r);
+    r = _pow_recursion(-5, 3);
+    printf("%d\n", r);
+    return (0);
+}
+</pre>
+
+**Compile It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 4-main.c 4-pow_recursion.c -o 4-pow
+</pre>
+
+**Run It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ ./4-pow 
+1
+1
+65536
+25
+-1
+-125
+Chukwuemeka@Ubuntu:~$ 
+</pre>
 
 
 
