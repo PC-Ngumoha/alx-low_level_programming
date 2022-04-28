@@ -64,6 +64,40 @@ reklaW notloC
 Chukwuemeka@Ubuntu:~$ 
 </pre>
 
+### 2-strlen_recursion.c
+This program contains the function `_strlen_recursion` which takes a string `s` as an argument, computes the length of the string using recursion and the returns that length. In order to use this program:
+
+Create the `2-main.c` file and type the following code into it:
+<pre>
+#include "main.h"
+#include &lt;stdio.h&gt;
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    int n;
+
+    n = _strlen_recursion("Corbin Coleman");
+    printf("%d\n", n);
+    return (0);
+}
+</pre>
+
+**Compile It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89  2-main.c 2-strlen_recursion.c -o 2-strlen_recursion
+</pre>
+
+**Run It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ ./2-strlen_recursion 
+14
+Chukwuemeka@Ubuntu:~$ 
+</pre>
 
 
 
