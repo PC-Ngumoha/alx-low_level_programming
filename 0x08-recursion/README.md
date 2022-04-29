@@ -300,9 +300,51 @@ Chukwuemeka@Ubuntu:~$ ./6-prime
 Chukwuemeka@Ubuntu:~$ 
 </pre>
 
+## Advanced Program
 
+### 100-is_palindrome.c
+This program contains the function `is_palindrome` which takes a string `s` as it's argument and determines if that string is a palindrome (A string that when reversed, would still have the same meaning) or not. If the string is a palindrome, the function returns 1, if not, it returns 0. In order to use this program:
 
+Create the `100-main.c` file and type the following code into it:
+<pre>
+#include "main.h"
+#include &lt;stdio.h&gt;
 
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    int r;
+
+    r = is_palindrome("level");
+    printf("%d\n", r);
+    r = is_palindrome("redder");
+    printf("%d\n", r);
+    r = is_palindrome("test");
+    printf("%d\n", r);
+    r = is_palindrome("step on no pets");
+    printf("%d\n", r);
+    return (0);
+}
+</pre>
+
+**Compile It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 100-main.c 100-is_palindrome.c -o 100-palindrome
+</pre>
+
+**Run It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ ./100-palindrome 
+1
+1
+0
+1
+Chukwuemeka@Ubuntu:~$ 
+</pre>
 
 
 
