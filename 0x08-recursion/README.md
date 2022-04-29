@@ -244,8 +244,61 @@ Chukwuemeka@Ubuntu:~$ ./5-sqrt
 Chukwuemeka@Ubuntu:~$ 
 </pre>
 
+### 6-is_prime_number.c
+This program contains a function `is_prime_number` which takes an integer argument `n` and determines if `n` is a prime number. If `n` is a prime number, it returns `1`. Else, it returns `0`. In order to use this program:
 
+Create the `6-main.c` file and write the following code into it:
+<pre>
+#include "main.h"
+#include &lt;stdio.h&gt;
 
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    int r;
+
+    r = is_prime_number(1);
+    printf("%d\n", r);
+    r = is_prime_number(1024);
+    printf("%d\n", r);
+    r = is_prime_number(16);
+    printf("%d\n", r);
+    r = is_prime_number(17);
+    printf("%d\n", r);
+    r = is_prime_number(25);
+    printf("%d\n", r);
+    r = is_prime_number(-1);
+    printf("%d\n", r);
+    r = is_prime_number(113);
+    printf("%d\n", r);
+    r = is_prime_number(7919);
+    printf("%d\n", r);
+    return (0);
+}
+</pre>
+
+**Compile It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 6-main.c 6-is_prime_number.c -o 6-prime
+</pre>
+
+**Run It:**
+<pre>
+Chukwuemeka@Ubuntu:~$ ./6-prime 
+0
+0
+0
+1
+0
+0
+1
+1
+Chukwuemeka@Ubuntu:~$ 
+</pre>
 
 
 
