@@ -20,7 +20,7 @@ Chukwuemeka@Ubuntu:~$
 ```
 
 ### 1-args.c
-This is a program which when compiled and run will print out the number of command line arguments to the screen. In order to use this program:
+This is a program which when compiled and run with command-line arguments will print out the number of command line arguments to the screen. In order to use this program:
 
 **Compile It:**
 ```
@@ -38,3 +38,36 @@ Chukwuemeka@Ubuntu:~$ ./nargs hello, world
 2
 Chukwuemeka@Ubuntu:~$ 
 ```
+### 2-args.c
+This is a program which when compiled and run with command-line arguments will print out all the command-line arguments to the screen. In order to use this program:
+
+**Compile It:**
+```
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 2-args.c -o args
+```
+**Run It:**
+```
+Chukwuemeka@Ubuntu:~$ ./args 
+./args
+Chukwuemeka@Ubuntu:~$ ./args You can do anything, but not everything.
+./args
+You
+can
+do
+anything,
+but
+not
+everything.
+Chukwuemeka@Ubuntu:~$ 
+```
+
+
+
+
+
+
+
+
+
+
+
