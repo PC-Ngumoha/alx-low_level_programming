@@ -82,6 +82,26 @@ Error
 Chukwuemeka@Ubuntu:~$ 
 ```
 
+### 4-add.c
+This is a program which when compiled and run with command line arguments will calculate the sum of positive integers in the vector of command line arguments `argv` and print it to the screen. If the command line arguments contain any value that is not a digit, the program returns `Error` to the screen followed by a newline. Otherwise, it returns the sum to the screen followed by a newline. In order to use this program:
+
+**Compile It:**
+```
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 4-add.c -o add
+```
+**Run It:**
+```
+Chukwuemeka@Ubuntu:~$ ./add 1 1
+2
+Chukwuemeka@Ubuntu:~$ ./add 1 10 100 1000
+1111
+Chukwuemeka@Ubuntu:~$ ./add 1 2 3 e 4 5
+Error
+Chukwuemeka@Ubuntu:~$ ./add
+0
+Chukwuemeka@Ubuntu:~$ 
+```
+
 
 
 
