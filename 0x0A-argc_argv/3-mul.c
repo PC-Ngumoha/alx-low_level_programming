@@ -12,25 +12,19 @@
  */
 int main(int argc, char *argv[])
 {
-	int i, result;
+	int num1, num2;
 
-	result = 1;
-	if (argc > 1 && argc < 4)
+	if (argc == 3)
 	{
-		for (i = 1; i < argc; i++)
-		{
-			int val;
-
-			val = atoi(argv[i]);
-			result *= (int)(val);
-		}
+		num1 = atoi(argv[1]);
+		num2 = atoi(argv[2]);
+		printf("%d\n", (num1 * num2));
 	}
 	else
 	{
 		printf("Error\n");
 		return (1);
 	}
-	printf("%d\n", result);
 
 	return (0);
 }
