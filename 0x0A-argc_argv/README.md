@@ -102,6 +102,30 @@ Chukwuemeka@Ubuntu:~$ ./add
 Chukwuemeka@Ubuntu:~$ 
 ```
 
+## Advanced Programs
+
+### 100-change.c
+This is a program which when compiled and run with one command line argument, will take that command line argument as the cents it has to return coins for, and determines the number of coins to return. In order to use this program:
+
+**Compile It:**
+```
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 100-change.c -o change
+```
+**Run It:**
+```
+Chukwuemeka@Ubuntu:~$ ./change 
+Error
+Chukwuemeka@Ubuntu:~$ ./change 10
+1
+Chukwuemeka@Ubuntu:~$ ./change 100
+4
+Chukwuemeka@Ubuntu:~$ ./change 101
+5
+Chukwuemeka@Ubuntu:~$ ./change 13
+3
+Chukwuemeka@Ubuntu:~$ 
+```
+
 
 
 
