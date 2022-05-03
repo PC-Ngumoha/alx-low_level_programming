@@ -60,7 +60,27 @@ not
 everything.
 Chukwuemeka@Ubuntu:~$ 
 ```
+### 3-mul.c
+This is a program which when compiled and run with command line arguments will calculate the product of the command line arguments (which we are assuming are integers) and prints the result to the screen followed by a newline. In order to use this program:
 
+**Compile It:**
+```
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 3-mul.c -o mul
+```
+**Run It:**
+```
+Chukwuemeka@Ubuntu:~$ ./mul 2 3
+6
+Chukwuemeka@Ubuntu:~$ ./mul 2 -3
+-6
+Chukwuemeka@Ubuntu:~$ ./mul 2 0
+0
+Chukwuemeka@Ubuntu:~$ ./mul 245 3245342
+795108790
+Chukwuemeka@Ubuntu:~$ ./mul
+Error
+Chukwuemeka@Ubuntu:~$ 
+```
 
 
 
