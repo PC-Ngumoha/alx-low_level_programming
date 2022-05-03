@@ -7,8 +7,7 @@ This is a program which when compiled with the `-Wno-unused-parameter` compiler 
 
 **Compile It:**
 ```
-Chukwuemeka@Ubuntu:~$ gcc -Wall -Werror -Wextra -Wno-unused-parameter -pedantic -std=gnu89 0-whatsmyname.c -o mynameis
-
+Chukwuemeka@Ubuntu:~$ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 0-whatsmyname.c -o mynameis
 ```
 **Run It:**
 ```
