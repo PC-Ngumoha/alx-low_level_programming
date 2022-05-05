@@ -8,8 +8,8 @@ This program contains the function `create_array` which when compiled and run wi
 Create the test file `0-main.c` and type the following code into it:
 ```
 #include "holberton.h"
-#include &lt;stdio.h&gt;
-#include &lt;stdlib.h&gt;
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
  * simple_print_buffer - prints buffer in hexa
