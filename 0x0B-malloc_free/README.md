@@ -158,6 +158,83 @@ Chukwuemeka@Ubuntu:~$ ./c | cat -e
 Betty Holberton$
 Chukwuemeka@Ubuntu:~$ 
 ```
+### 3-alloc_grid.c
+This program contains the function `alloc_grid` which when compiled and run will take two integer arguments `width` and `height` and create a 2D grid of height `height` and width `width`. Then it returns a pointer to the grid's location in memory. In order to use this program:
+
+Create test file `3-main.c` and type the following code into it:
+```
+#include "holberton.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+/**
+ * print_grid - prints a grid of integers
+ * @grid: the address of the two dimensional grid
+ * @width: width of the grid
+ * @height: height of the grid
+ *
+ * Return: Nothing.
+ */
+void print_grid(int **grid, int width, int height)
+{
+    int w;
+    int h;
+
+    h = 0;
+    while (h < height)
+    {
+        w = 0;
+        while (w < width)
+        {
+            printf("%d ", grid[h][w]);
+            w++;
+        }
+        printf("\n");
+        h++;
+    }   
+}
+
+/**
+ * main - check the code for ALX School students.
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    int **grid;
+
+    grid = alloc_grid(6, 4);
+    if (grid == NULL)
+    {
+        return (1);
+    }
+    print_grid(grid, 6, 4);
+    printf("\n");
+    grid[0][3] = 98;
+    grid[3][4] = 402;
+    print_grid(grid, 6, 4);
+    return (0);
+```
+
+**Compile It:**
+```
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 3-main.c 3-alloc_grid.c -o g
+```
+
+**Run It:**
+```
+Chukwuemeka@Ubuntu:~$ ./g
+0 0 0 0 0 0 
+0 0 0 0 0 0 
+0 0 0 0 0 0 
+0 0 0 0 0 0 
+
+0 0 0 98 0 0 
+0 0 0 0 0 0 
+0 0 0 0 0 0 
+0 0 0 0 402 0 
+Chukwuemeka@Ubuntu:~$ 
+```
 
 
 
