@@ -78,4 +78,73 @@ Chukwuemeka@Ubuntu:~$ ./a
 0x48 0x48 0x48 0x48 0x48 0x48 0x48 0x48
 Chukwuemeka@Ubuntu:~$ 
 ```
+### 1-strdup.c
+This is a program which contains the function `_strdup` which takes a string `str` as an argument and copies the content of that string from it's memory location to another location in memory. In order to use the program:
+
+Create test file `1-main.c` and type the followuing code into it:
+```
+#include "holberton.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+/**
+ * main - check the code for ALX School students.
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    char *s;
+
+    s = _strdup("Holberton");
+    if (s == NULL)
+    {
+        printf("failed to allocate memory\n");
+        return (1);
+    }
+    printf("%s\n", s);
+    free(s);
+    return (0);
+}
+```
+
+**Compile It:**
+```
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 1-main.c 1-strdup.c -o s
+```
+
+**Run It:**
+```
+Chukwuemeka@Ubuntu:~$ ./s 
+Holberton
+Chukwuemeka@Ubuntu:~$ 
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
