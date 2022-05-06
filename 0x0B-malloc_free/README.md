@@ -332,7 +332,9 @@ Chukwuemeka@Ubuntu:~$
 
 ### 100-argstostr.c
 This program contains the function `argstostr` which takes two arguments; an integer argument `ac` which represents the count of command line arguments passed to the program and an array of strings `av` which is the vector holding all the command line arguments passed into to the program during runtime. When this program is compiled and run with command line arguments, all the command line arguments are concatenated into a single string and returned by the function. In order to use this program: 
+
 Create test file `100-main.c` and type the following code into it:
+
 ```
 #include "main.h"
 #include <stdio.h>
@@ -357,11 +359,15 @@ int main(int ac, char *av[])
     return (0);
 }
 ```
+
 **Compile It:**
+
 ```
 Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 100-main.c 100-argstostr.c -o args
 ```
+
 **Run It:**
+
 ```
 Chukwuemeka@Ubuntu:~$ ./args I will "show you" how great I am
 ./args
