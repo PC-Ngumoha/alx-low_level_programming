@@ -59,6 +59,46 @@ Chukwuemeka@Ubuntu:~$ echo $?
 Chukwuemeka@Ubuntu:~$ 
 ```
 
+### 1-string_nconcat.c
+This program contains the function `string_nconcat` which, when compiled and run, takes two string arguments `s1` and `s2` and one integer argument `n` and the concatenates `n` bytes from `s2` to `s1` and then returns the newly formed string. In order to use this program:
+
+Create test file `1-main.c` and type the following code:
+
+```
+#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    char *concat;
+
+    concat = string_nconcat("Best ", "School !!!", 6);
+    printf("%s\n", concat);
+    free(concat);
+    return (0);
+}
+```
+
+**Compile It:**
+
+```
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 1-main.c 1-string_nconcat.c -o 1-string_nconcat
+```
+
+**Run It:**
+
+```
+Chukwuemeka@Ubuntu:~$ ./1-string_nconcat
+Best School
+Chukwuemeka@Ubuntu:~$ 
+```
+
 
 
 
