@@ -180,6 +180,76 @@ Chukwuemeka@Ubuntu:~$ ./2-calloc
 Chukwuemeka@Ubuntu:~$ 
 ```
 
+### 3-array_range.c
+This program contains the function `array_range` which, when compiled and run, takes two integer arguments; the minimum number (inclusive) in the range `min` and the maximum number (inclusive) in the range of numbers `max` and then it creates an array of appropriate size and stores the numbers in the specified range in the newly created array of numbers and then it returns a pointer to the array. In order to use this program:
+
+Create test file `3-main.c` and type the following into it:
+
+```
+#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+/**
+ * simple_print_buffer - prints buffer in hexa
+ * @buffer: the address of memory to print
+ * @size: the size of the memory to print
+ *
+ * Return: Nothing.
+ */
+void simple_print_buffer(int *buffer, unsigned int size)
+{
+    unsigned int i;
+
+    i = 0;
+    while (i < size)
+    {
+        if (i % 10)
+        {
+            printf(" ");
+        }
+        if (!(i % 10) && i)
+        {
+            printf("\n");
+        }
+        printf("0x%02x", buffer[i]);
+        i++;
+    }
+    printf("\n");
+}
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    int *a;
+
+    a = array_range(0, 10);
+    simple_print_buffer(a, 11);
+    free(a);
+    return (0);
+}
+```
+
+**Compile It:**
+
+```
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 3-main.c 3-array_range.c -o 3-array_range
+```
+
+**Run It:**
+
+```
+Chukwuemeka@Ubuntu:~$ /3-array_range
+0x00 0x01 0x02 0x03 0x04 0x05 0x06 0x07 0x08 0x09
+0x0a
+Chukwuemeka@Ubuntu:~$ 
+```
+
 
 
 
