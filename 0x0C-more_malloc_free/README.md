@@ -250,6 +250,93 @@ Chukwuemeka@Ubuntu:~$ /3-array_range
 Chukwuemeka@Ubuntu:~$ 
 ```
 
+## Advanced Programs
+
+### 100-realloc.c
+This program contains the function `_realloc` which, when compiled and run, will take three arguments; A void pointer to the previously allocated block of memory `ptr`, Size of the previously allocated block of memory `old_size`, Size of the newly allocated block of memory. Then it returns the address to the newly allocated block of memory. In order to use this program:
+
+Create test file `100-main.c` and type in the following code:
+
+```
+#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+/**
+ * simple_print_buffer - prints buffer in hexa
+ * @buffer: the address of memory to print
+ * @size: the size of the memory to print
+ *
+ * Return: Nothing.
+ */
+void simple_print_buffer(char *buffer, unsigned int size)
+{
+    unsigned int i;
+
+    i = 0;
+    while (i < size)
+    {
+        if (i % 10)
+        {
+            printf(" ");
+        }
+        if (!(i % 10) && i)
+        {
+            printf("\n");
+        }
+        printf("0x%02x", buffer[i]);
+        i++;
+    }
+    printf("\n");
+}
+
+/**
+ * main - check the code for
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    char *p;
+    int i;
+
+    p = malloc(sizeof(char) * 10);
+    p = _realloc(p, sizeof(char) * 10, sizeof(char) * 98);
+    i = 0;
+    while (i < 98)
+    {
+        p[i++] = 98;
+    }
+    simple_print_buffer(p, 98);
+    free(p);
+    return (0);
+}
+```
+
+**Compile It:**
+
+```
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 100-main.c 100-realloc.c -o 100-realloc
+```
+
+**Run It:**
+
+```
+Chukwuemeka@Ubuntu:~$ ./100-realloc
+0x62 0x62 0x62 0x62 0x62 0x62 0x62 0x62 0x62 0x62
+0x62 0x62 0x62 0x62 0x62 0x62 0x62 0x62 0x62 0x62
+0x62 0x62 0x62 0x62 0x62 0x62 0x62 0x62 0x62 0x62
+0x62 0x62 0x62 0x62 0x62 0x62 0x62 0x62 0x62 0x62
+0x62 0x62 0x62 0x62 0x62 0x62 0x62 0x62 0x62 0x62
+0x62 0x62 0x62 0x62 0x62 0x62 0x62 0x62 0x62 0x62
+0x62 0x62 0x62 0x62 0x62 0x62 0x62 0x62 0x62 0x62
+0x62 0x62 0x62 0x62 0x62 0x62 0x62 0x62 0x62 0x62
+0x62 0x62 0x62 0x62 0x62 0x62 0x62 0x62 0x62 0x62
+0x62 0x62 0x62 0x62 0x62 0x62 0x62 0x62
+Chukwuemeka@Ubuntu:~$ 
+```
+
 
 
 
