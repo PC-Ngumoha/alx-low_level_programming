@@ -2,7 +2,6 @@
 #include <stdlib.h>
 
 char *_strdup(char *str);
-int get_length(char *str);
 
 /**
  * new_dog - returns a new instance of struct dog
@@ -15,7 +14,7 @@ int get_length(char *str);
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *d_ptr;
-	char *temp_name, *temp_owner
+	char *temp_name, *temp_owner;
 
 	d_ptr = malloc(sizeof(dog_t));
 	if (d_ptr == NULL)
@@ -54,34 +53,21 @@ char *_strdup(char *str)
 	char *ptr;
 	int size, i;
 
-	size = get_length(str);
+	if (str == NULL)
+		return (NULL);
+
+	size = 0;
+	/* Obtaining the length of the string */
+	for (i = 0; str[i] != '\0'; i++)
+		size++;
+
 	ptr = malloc(sizeof(char) * (size + 1));
 	if (ptr == NULL)
 		return (NULL);
-	for (i = 0; i < size; i++)
+	
+	for (i = 0; str[i] != '\0'; i++)
 		ptr[i] = str[i];
+
 	ptr[size] = '\0';
 	return (ptr);
-}
-
-/**
- * get_length - gets the length of a string
- * @str: string parameter
- *
- * Return: length of @str
- */
-int get_length(char *str)
-{
-	int i, length;
-
-	if (str == NULL)
-		return (0);
-	i = 0;
-	length = 0;
-	while (str[i] != '\0')
-	{
-		length++;
-		i++;
-	}
-	return (length);
 }
