@@ -15,22 +15,30 @@ int get_length(char *str);
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *d_ptr;
+	char *temp_name, *temp_owner
 
 	d_ptr = malloc(sizeof(dog_t));
 	if (d_ptr == NULL)
 		return (NULL);
 
-	if (name == NULL)
-		d_ptr->name = "nil";
-	else
-		d_ptr->name = _strdup(name);
+	temp_name = _strdup(name);
+	if (temp_name == NULL)
+	{
+		free(d_ptr);
+		return (NULL);
+	}
+	d_ptr->name = temp_name;
 
 	d_ptr->age = age;
 
-	if (owner == NULL)
-		d_ptr->owner = "nil";
-	else
-		d_ptr->owner = _strdup(owner);
+	temp_owner = _strdup(owner);
+	if (temp_owner == NULL)
+	{
+		free(d_ptr->name);
+		free(d_ptr);
+		return (NULL);
+	}
+	d_ptr->owner = temp_owner;
 
 	return (d_ptr);
 }
@@ -47,7 +55,7 @@ char *_strdup(char *str)
 	int size, i;
 
 	size = get_length(str);
-	ptr = malloc(sizeof(char) * size + 1);
+	ptr = malloc(sizeof(char) * (size + 1));
 	if (ptr == NULL)
 		return (NULL);
 	for (i = 0; i < size; i++)
