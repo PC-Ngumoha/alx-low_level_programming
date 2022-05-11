@@ -5,4 +5,12 @@ This header contains the definition of the `dog` struct which we use to represen
 
 ### 1-init_dog.c
 This programs contains a function `init_dog` which, when compiled and run, takes four arguments: A pointer to struct dog `d`; A string for the dog's name `name`; A floating point number for the dog's age `age`; A string for the dog's owner's name `owner`. Then it uses all these arguments to initialize the instance of struct dog pointed to by `d`.
+
+### 2-print_dog.c
+This program contains a function `print_dog` which, when compiled and run, takes a single argument: A pointer to a struct `d`. And then it prints out the content of the struct to the screen using the following format:
+<pre>
+Name: name of dog
+Age: age of dog
+Owner: name of dog's owner
+</pre>
  
