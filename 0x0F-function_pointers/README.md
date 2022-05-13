@@ -136,6 +136,81 @@ Chukwuemeka@Ubuntu:~$ ./b
 Chukwuemeka@Ubuntu:~$ 
 ```
 
+### 2-int_index.c
+This program contains the function `int_index` which takes three arguments: an array `array`, an int `size` and a pointer to a function that takes an int argument and returns int. When the program is compiled and run, the function pointed to is called and is used to determine if an element of `array` matches the condition it was designed to test. the function then returns `1` or `0` depending on whether it matches or not. If an element matches, the index of that element is returned, otherwise, if none matches, `-1` is returned. In order to use this program:
+
+Create test file `2-main.c` and type the following code into it:
+```
+#include <stdio.h>
+#include "function_pointers.h"
+
+/**
+ * is_98 - check if a number is equal to 98
+ * @elem: the integer to check
+ *
+ * Return: 0 if false, something else otherwise.
+ */
+int is_98(int elem)
+{
+    return (98 == elem);
+}
+
+/**
+ * is_strictly_positive - check if a number is greater than 0
+ * @elem: the integer to check
+ *
+ * Return: 0 if false, something else otherwise.
+ */
+int is_strictly_positive(int elem)
+{
+    return (elem > 0);
+}
+
+
+/**
+ * abs_is_98 - check if the absolute value of a number is 98
+ * @elem: the integer to check
+ *
+ * Return: 0 if false, something else otherwise.
+ */
+int abs_is_98(int elem)
+{
+    return (elem == 98 || -elem == 98);
+}
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    int array[20] = {0, -98, 98, 402, 1024, 4096, -1024, -98, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 98};
+    int index;
+
+    index = int_index(array, 20, is_98);
+    printf("%d\n", index);
+    index = int_index(array, 20, abs_is_98);
+    printf("%d\n", index);
+    index = int_index(array, 20, is_strictly_positive);
+    printf("%d\n", index);
+    return (0);
+}
+```
+**Compile It:**
+```
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 2-main.c 2-int_index.c -o c
+```
+
+**Run It:**
+```
+Chukwuemeka@Ubuntu:~$ ./c 
+2
+1
+2
+Chukwuemeka@Ubuntu:~$ 
+```
+
 
 
 
