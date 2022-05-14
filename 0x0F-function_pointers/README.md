@@ -211,6 +211,33 @@ Chukwuemeka@Ubuntu:~$ ./c
 Chukwuemeka@Ubuntu:~$ 
 ```
 
+### 3-calc.h, 3-op_functions.c, 3-get_op_func.c & 3-main.c
+This files combine together to create a program that can perform simple arithmetic operations involving two integers `num1` and `num2` and produce and output `result`. If the number of arguments to the program are wrong, it prints `Error` to the screen followed by a newline and returns `98`. If an operator is used which is not part of the accepted operators, it prints `Error` to the screen followed by a newline and returns `99`. If the operators `/` or `%` are used and `num2` is equal to `0`, it prints `Error` to the screen followed by a newline and returns `100`. In order to use this program:
+
+**Compile It:**
+```
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 3-main.c 3-op_functions.c 3-get_op_func.c -o calc
+```
+
+**Run It:**
+```
+Chukwuemeka@Ubuntu:~$ ./calc 1 + 1
+2
+Chukwuemeka@Ubuntu:~$ ./calc 97 + 1
+98
+Chukwuemeka@Ubuntu:~$ ./calc 1024 / 10
+102
+Chukwuemeka@Ubuntu:~$ ./calc 1024 '*' 98
+100352
+Chukwuemeka@Ubuntu:~$ ./calc 1024 '\*' 98
+Error
+Chukwuemeka@Ubuntu:~$ ./calc 1024 - 98
+926
+Chukwuemeka@Ubuntu:~$ ./calc 1024 '%' 98
+44
+Chukwuemeka@Ubuntu:~$ 
+```
+
 
 
 
