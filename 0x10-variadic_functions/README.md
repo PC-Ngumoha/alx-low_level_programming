@@ -94,6 +94,35 @@ Jay, Django
 Chukwuemeka@Ubuntu:~$ 
 ```
 
+### 3-print_all.c
+This program contains the function `print_all` which takes a const string `format` and an indefinite number of optional values as it's arguments. When compiled and run, this function uses the pattern specified in the format in order to determine the type and number of arguments to print to the screen. In order to use this program:
+
+Create test file `3-main.c` and type the following code into it:
+```
+#include "variadic_functions.h"
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    print_all("ceis", 'B', 3, "stSchool");
+    return (0);
+}
+```
+**Compile It**
+```
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 3-main.c 3-print_all.c -o d
+```
+**Run It**
+```
+Chukwuemeka@Ubuntu:~$ ./d 
+B, 3, stSchool
+Chukwuemeka@Ubuntu:~$ 
+```
+
 
 
 
