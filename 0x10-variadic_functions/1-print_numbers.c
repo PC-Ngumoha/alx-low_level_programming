@@ -22,7 +22,8 @@ void print_numbers(const char *seperator, const unsigned int n, ...)
 	{
 		if (count == n)
 		{
-			printf("%d\n", i);
+			printf("%d", i);
+			break;
 		}
 		
 		if (seperator == NULL)
@@ -35,5 +36,6 @@ void print_numbers(const char *seperator, const unsigned int n, ...)
 		}
 		count++;
 	}
+	printf("\n");
 	va_end(args);
 }
