@@ -35,3 +35,39 @@ Chukwuemeka@Ubuntu:~$ ./a
 500
 Chukwuemeka@Ubuntu:~$ 
 ```
+### 1-print_numbers.c
+This program contains a function `print_numbers` which takes a string `seperator`, an integer `n` and an indefinite list of optional arguments denoted by `...`. In prints out the values of `n` number of the optional arguments. In order to use this program:
+
+Create test file `1-main.c` and type the following into it:
+```
+#include "variadic_functions.h"
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    print_numbers(", ", 4, 0, 98, -1024, 402);
+    return (0);
+}
+```
+**Compile It:**
+```
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 1-main.c 1-print_numbers.c -o b
+```
+**Run It:**
+```
+Chukwuemeka@Ubuntu:~$ ./b
+0, 98, -1024, 402
+Chukwuemeka@Ubuntu:~$ 
+```
+
+
+
+
+
+
+
+
