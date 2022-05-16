@@ -18,8 +18,6 @@ void print_numbers(const char *seperator, const unsigned int n, ...)
 
 	if (n == 0)
 		return;
-	if (seperator == NULL)
-		seperator = "";
 
 	count = 1;
 	va_start(args, n);
@@ -29,7 +27,15 @@ void print_numbers(const char *seperator, const unsigned int n, ...)
 		{
 			printf("%d\n", i);
 		}
-		printf("%d%s", i, seperator);
+		
+		if (seperator == NULL)
+		{
+			printf("%d", i);
+		}
+		else
+		{
+			printf("%d%s", i, seperator);
+		}
 		count++;
 	}
 	va_end(args);
