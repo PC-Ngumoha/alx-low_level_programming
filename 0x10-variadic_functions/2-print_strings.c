@@ -28,9 +28,11 @@ void print_strings(const char *seperator, const unsigned int n, ...)
 		if (count == n)
 		{
 			if (str == NULL)
-				printf("(nil)\n");
+				printf("(nil)");
 			else
-				printf("%s\n", str);
+				printf("%s", str);
+
+			break;
 		}
 		else
 		{
@@ -42,4 +44,5 @@ void print_strings(const char *seperator, const unsigned int n, ...)
 		count++;
 	}
 	va_end(args);
+	printf("\n");
 }
