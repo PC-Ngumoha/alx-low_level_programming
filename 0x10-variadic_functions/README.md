@@ -65,6 +65,39 @@ Chukwuemeka@Ubuntu:~$
 ```
 
 
+### 2-print_strings.c
+This program contains the functions `print_strings` which takes a string `seperator`, an integer `n` and an unlimited number of optional arguments denoted by `...`. When the program is compiled and run, it prints out the strings to the screen. In order to use this program:
+
+Create test file `2-main.c` and enter the following code:
+```
+#include "variadic_functions.h"
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    print_strings(", ", 2, "Jay", "Django");
+    return (0);
+}
+```
+**Compile It**
+```
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 2-main.c 2-print_strings.c -o c
+```
+**Run It**
+```
+Chukwuemeka@Ubuntu:~$ ./c 
+Jay, Django
+Chukwuemeka@Ubuntu:~$ 
+```
+
+
+
+
+
 
 
 
