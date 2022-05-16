@@ -12,29 +12,19 @@
  */
 void print_numbers(const char *seperator, const unsigned int n, ...)
 {
-	unsigned int count;
-	int i;
+	unsigned int i;
 	va_list args;
 
-	count = 1;
 	va_start(args, n);
-	for (i = va_arg(args, int); count <= n; i = va_arg(args, int))
+
+	for (i = 0; i < n; i++)
 	{
-		if (count == n)
+		printf("%d", va_arg(args, int));
+		if (i < n - 1)
 		{
-			printf("%d", i);
-			break;
+			if (seperator)
+				printf("%s", seperator);
 		}
-		
-		if (seperator == NULL)
-		{
-			printf("%d", i);
-		}
-		else
-		{
-			printf("%d%s", i, seperator);
-		}
-		count++;
 	}
 	va_end(args);
 	printf("\n");
