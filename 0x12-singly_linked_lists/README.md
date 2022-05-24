@@ -2,7 +2,7 @@
 
 ## Basic Programs
 
-### 0-print_list
+### 0-print_list.c
 This file contains the function `print_list` which takes a pointer to the first node on the linked list and then uses that to print out the contents of the linked list to the screen. In order to use this program:
 
 Create test file `0-main.c` and enter the following code into it:
@@ -281,6 +281,69 @@ Chukwuemeka@Ubuntu:~$ ./d
 [6] Walton
 Chukwuemeka@Ubuntu:~$ 
 ```
+
+### 4-free_list.c
+This program contains the function `free_list` which takes a pointer to a node on the linked list `head` and uses that to release all the memory allocated for the linked list. In order to use this program:
+
+Create test file `4-main.c` and enter the following code:
+```
+#include "lists.h"
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    list_t *head;
+
+    head = NULL;
+    add_node_end(&head, "Bob");
+    add_node_end(&head, "&");
+    add_node_end(&head, "Kris");
+    add_node_end(&head, "love");
+    add_node_end(&head, "asm");
+    print_list(head);
+    free_list(head);
+    head = NULL;
+    return (0);
+}
+```
+**Compile It:**
+```
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 4-main.c 4-free_list.c 3-add_node_end.c 0-print_list.c -o e
+```
+**Test For Memory Leaks With Valgrind**
+```
+Chukwuemeka@Ubuntu:~$ valgrind ./e
+==3598== Memcheck, a memory error detector
+==3598== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==3598== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==3598== Command: ./e
+==3598== 
+[6] Bob
+[1] &
+[3] Kris
+[4] love
+[3] asm
+==3598== 
+==3598== HEAP SUMMARY:
+==3598==     in use at exit: 0 bytes in 0 blocks
+==3598==   total heap usage: 11 allocs, 11 frees, 1,166 bytes allocated
+==3598== 
+==3598== All heap blocks were freed -- no leaks are possible
+==3598== 
+==3598== For counts of detected and suppressed errors, rerun with: -v
+==3598== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+Chukwuemeka@Ubuntu:~$ 
+```
+
+
+
+
+
+
 
 
 
