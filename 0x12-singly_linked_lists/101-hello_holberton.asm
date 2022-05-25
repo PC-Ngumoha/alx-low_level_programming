@@ -1,0 +1,15 @@
+; A simple program to print a message to the terminal
+
+
+	global main
+	extern printf
+
+	section .text
+main:
+	mov	rdi, format
+	mov	rax, 0
+	call	printf
+	mov	rax, 0
+	ret
+format:
+	db "Hello, Holberton",10, 0
