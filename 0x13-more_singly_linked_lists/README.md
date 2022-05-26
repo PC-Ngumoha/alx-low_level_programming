@@ -410,7 +410,69 @@ Chukwuemeka@Ubuntu:~$ valgrind ./g
 ==4369== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 Chukwuemeka@Ubuntu:~$ 
 ```
+### 7-get_nodeint.c
+This program contains the function `get_nodeint_at_index` which takes a pointer to the head node of a linked list `head` and an integer parameter `index` which specifies the index of the node on the linked list to return. Then it traverses the linked list until it gets to the specified index, at which point, it returns the node at that index. If for any reason, the specified index does not exist on the linked list, the function returns `NULL`. In order to use this program:
 
+Create test file `7-main.c` and enter the following code into it:
+```
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include "lists.h"
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    listint_t *head;
+    listint_t *node;
+
+    head = NULL;
+    add_nodeint_end(&head, 0);
+    add_nodeint_end(&head, 1);
+    add_nodeint_end(&head, 2);
+    add_nodeint_end(&head, 3);
+    add_nodeint_end(&head, 4);
+    add_nodeint_end(&head, 98);
+    add_nodeint_end(&head, 402);
+    add_nodeint_end(&head, 1024);
+    print_listint(head);
+    node = get_nodeint_at_index(head, 5);
+    printf("%d\n", node->n);
+    print_listint(head);
+    free_listint2(&head);
+    return (0);
+}
+```
+**Compile It**
+```
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 7-main.c 3-add_nodeint_end.c 0-print_listint.c 5-free_listint2.c 7-get_nodeint.c -o h
+```
+**Run It**
+```
+Chukwuemeka@Ubuntu:~$ ./h 
+0
+1
+2
+3
+4
+98
+402
+1024
+98
+0
+1
+2
+3
+4
+98
+402
+1024
+Chukwuemeka@Ubuntu:~$ 
+```
 
 
 
