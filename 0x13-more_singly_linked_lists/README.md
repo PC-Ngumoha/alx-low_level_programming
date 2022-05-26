@@ -103,6 +103,49 @@ Chukwuemeka@Ubuntu:~$ ./b
 Chukwuemeka@Ubuntu:~$ 
 ```
 
+### 2-add_nodeint.c
+This program contains the function `add_nodeint` which takes two arguments; a pointer to a pointer to a linked list `head` and an integer `n`. It then creates a new node and sets the data in that node to the value of `n` and then adds the node to the beginning of the linked list. In order to use this program:
 
+Create test file `2-main.c` and enter the following code into it:
+```
+#include "lists.h"
 
-## Advanced Scripts
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    listint_t *head;
+
+    head = NULL;
+    add_nodeint(&head, 0);
+    add_nodeint(&head, 1);
+    add_nodeint(&head, 2);
+    add_nodeint(&head, 3);
+    add_nodeint(&head, 4);
+    add_nodeint(&head, 98);
+    add_nodeint(&head, 402);
+    add_nodeint(&head, 1024);
+    print_listint(head);
+    return (0);
+}
+```
+**Compile It**
+```
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 2-main.c 2-add_nodeint.c 0-print_listint.c -o c
+```
+**Run It**
+```
+Chukwuemeka@Ubuntu:~$ ./c 
+1024
+402
+98
+4
+3
+2
+1
+0
+Chukwuemeka@Ubuntu:~$ 
+```
