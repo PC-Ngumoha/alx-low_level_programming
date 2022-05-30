@@ -47,6 +47,46 @@ Chukwuemeka@Ubuntu:~$ ./a
 Chukwuemeka@Ubuntu:~$ 
 ```
 
+### 1-print_binary.c
+This program contains the function `print_binary` which takes an unsigned integer `num` as it's argument and prints out the binary equivalent of the passed in number. In order to use this program:
+
+Create test file `1-main.c` and enter the following code into it:
+```
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    print_binary(0);
+    printf("\n");
+    print_binary(1);
+    printf("\n");
+    print_binary(98);
+    printf("\n");
+    print_binary(1024);
+    printf("\n");
+    print_binary((1 << 10) + 1);
+    printf("\n");
+    return (0);
+}
+```
+**Compile**
+```
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 1-main.c 1-print_binary.c _putchar.c -o b
+```
+**Run**
+```
+Chukwuemeka@Ubuntu:~$ ./b 
+0
+1
+1100010
+10000000000
+10000000001
+Chukwuemeka@Ubuntu:~$ 
+```
+
 
 
 
