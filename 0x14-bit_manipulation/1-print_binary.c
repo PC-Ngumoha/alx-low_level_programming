@@ -9,11 +9,11 @@
 void print_binary(unsigned long int num)
 {
 	int temp;
-	static int count = 0;
+	static int count;
 
 	if (num == 0 && count > 0)
 		return;
-	else if (num == 0 && count == 0)
+	else if (num == 0)
 	{
 		_putchar('0');
 		return;
