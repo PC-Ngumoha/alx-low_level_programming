@@ -87,6 +87,43 @@ Chukwuemeka@Ubuntu:~$ ./b
 Chukwuemeka@Ubuntu:~$ 
 ```
 
+### 2-get_bit.c
+This program contains the function `get_bit` which takes two integers `num` and `index` as it's arguments and then returns the bit in `num` at the specified `index`. In order to use this program:
+
+Create test file `2-main.c` and enter the following code:
+```
+#include "main.h"
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    int n;
+
+    n = get_bit(1024, 10);
+    printf("%d\n", n);
+    n = get_bit(98, 1);
+    printf("%d\n", n);
+    n = get_bit(1024, 0);
+    printf("%d\n", n);
+    return (0);
+}
+```
+**Compile**
+```
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 2-main.c 2-get_bit.c -o c  
+```
+**Run**
+```
+Chukwuemeka@Ubuntu:~$ ./c
+1
+1
+0
+Chukwuemeka@Ubuntu:~$ 
+```
 
 
 
