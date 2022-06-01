@@ -108,3 +108,66 @@ Heap earth upon it.
 (printed chars: 468)
 Chukwuemeka@Ubuntu:~$ 
 ```
+
+### 1-create_file.c
+This program contains the function `create_file` which takes two arguments: a string literal `filename` which is the name of a file to be created or already exists in memory and a string `text_content` which holds the message to be stored into the file. It uses these two arguments to create a file in the current directory. If successful, it returns `1`, otherwise, it returns `-1`. In order to use this program:
+
+Create test file `1-main.c` and enter the following code into it:
+```
+#include <stdio.h>
+#include <stdlib.h>
+#include "main.h"
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(int ac, char **av)
+{
+    int res;
+
+    if (ac != 3)
+    {
+        dprintf(2, "Usage: %s filename text\n", av[0]);
+        exit(1);
+    }
+    res = create_file(av[1], av[2]);
+    printf("-> %i)\n", res);
+    return (0);
+}
+```
+**Compile**
+```
+Chukwuemeka@Ubuntu:~$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 1-main.c 1-create_file.c -o b
+```
+**Run**
+```
+Chukwuemeka@Ubuntu:~$ ./b hello world
+-> 1)
+Chukwuemeka@Ubuntu:~$ 
+```
+**Check If The File Was Created**
+```
+Chukwuemeka@Ubuntu:~$ cat hello
+world Chukwuemeka@Ubuntu:~$  
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
