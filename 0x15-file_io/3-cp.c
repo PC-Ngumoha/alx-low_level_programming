@@ -29,7 +29,7 @@ int main(int ac, char *av[])
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
 		exit(99);
 	}
-	while (length != 0)
+	while (buffer[1024])
 	{
 		length = read(file_from, buffer, 1024);
 
