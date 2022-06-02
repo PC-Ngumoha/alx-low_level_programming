@@ -39,8 +39,6 @@ void read_file(char *filename, char *buffer)
 {
 	int file_from, isclosed, isread;
 
-	if (!filename)
-		return;
 	/*Open file_from*/
 	file_from = open(filename, O_RDONLY);
 	if (file_from == -1)
@@ -78,8 +76,6 @@ void write_file(char *filename, char *buffer)
 {
 	int file_to, isclosed, iswritten;
 
-	if (!filename)
-		return;
 	/*Open file_to*/
 	file_to = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (file_to == -1)
