@@ -9,7 +9,7 @@
  */
 int main(int ac, char *av[])
 {
-	int file_from, file_to, length;
+	int file_from, file_to, length = 1;
 	char buffer[1024];
 
 	if (ac != 3)
@@ -29,11 +29,11 @@ int main(int ac, char *av[])
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
 		exit(99);
 	}
-	while (buffer[1024])
+	while (length)
 	{
 		length = read(file_from, buffer, 1024);
 
-		if (write(file_to, buffer, length) != length || file_to == -1)
+		if (write(file_to, buffer, length) != length)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
 			exit(99);
