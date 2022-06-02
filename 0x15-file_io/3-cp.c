@@ -33,7 +33,7 @@ int main(int ac, char *av[])
 	{
 		length = read(file_from, buffer, 1024);
 
-		if (write(file_to, buffer, length) != length)
+		if (write(file_to, buffer, length) != length || file_to == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
 			exit(99);
