@@ -7,6 +7,9 @@ This contains the function `print_dlistint` which takes a pointer to the head no
 This contains the function `dlistint_len` which takes a pointer to the head node of a D.L.L `h` and uses that to count the number of nodes on the list and then returns the number of nodes.
 
 ### 2-add_dnodeint.c
-This contains the function `add_dnodeint` which takes a pointer to the address of the head node of a D.L.L and the data to be added to the D.L.L , creates a new node, adds the data to the new node, adds the new node to the D.L.L and then returns the address of the new node. If it fails, the function returns `NULL`.
+This contains the function `add_dnodeint` which takes a pointer to the address of the head node of a D.L.L and the data to be added to the D.L.L , creates a new node, adds the data to the new node, adds the new node to the beginning of the D.L.L and then returns the address of the new node. If it fails, the function returns `NULL`.
 
-###    
+### 3-add_dnodeint_end.c
+This contains the function `add_dnodeint_end` which takes a pointer to the address of the head node of a D.L.L and the data to be added to the D.L.L, creates a new node, adds the data to the new node, adds the new node to the end of the D.L.L and then returns the address of the new node. If it fails, the function returns `NULL`.
+
+### 
