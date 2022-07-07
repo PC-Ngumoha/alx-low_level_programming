@@ -12,4 +12,7 @@ This contains the function `add_dnodeint` which takes a pointer to the address o
 ### 3-add_dnodeint_end.c
 This contains the function `add_dnodeint_end` which takes a pointer to the address of the head node of a D.L.L and the data to be added to the D.L.L, creates a new node, adds the data to the new node, adds the new node to the end of the D.L.L and then returns the address of the new node. If it fails, the function returns `NULL`.
 
-### 
+### 4-free_dlistint.c
+This contains the function `free_dlistint` which takes a pointer to the head node of a D.L.L and uses that to free up all the memory currently occupied by or allocated to the D.L.L during the course of the program.
+
+###  
