@@ -15,4 +15,7 @@ This contains the function `add_dnodeint_end` which takes a pointer to the addre
 ### 4-free_dlistint.c
 This contains the function `free_dlistint` which takes a pointer to the head node of a D.L.L and uses that to free up all the memory currently occupied by or allocated to the D.L.L during the course of the program.
 
-###  
+### 5-get_dnodeint.c
+This contains the function `get_dnodeint_at_index` which takes a pointer to the head node of a D.L.L and an index value, and returns the node at the specified index. If such node does not exist, it returns `NULL`.
+
+###   
