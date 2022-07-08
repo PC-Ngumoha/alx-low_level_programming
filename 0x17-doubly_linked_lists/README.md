@@ -24,4 +24,7 @@ This contains the function `sum_dlistint` which takes a pointer to the head node
 ### 7-insert_dnodeint.c
 This contains the function `insert_dnodeint_at_index` which inserts a new node at the specified index in the D.L.L and returns the address of the new_node inserted or `NULL` if it could not be inserted at the specified index.
 
-###     
+### 8-delete_dnodeint.c
+This contains the function `delete_nodeint_at_index` which deletes a node at the specified index in the D.L.L and returns `1` if successful. If not successful, it returns `-1`.
+
+###       
