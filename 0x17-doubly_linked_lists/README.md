@@ -21,4 +21,7 @@ This contains the function `get_dnodeint_at_index` which takes a pointer to the 
 ### 6-sum_dlistint.c
 This contains the function `sum_dlistint` which takes a pointer to the head node of a D.L.L, sums up all the data in the D.L.L and returns the sum.
 
-###    
+### 7-insert_dnodeint.c
+This contains the function `insert_dnodeint_at_index` which inserts a new node at the specified index in the D.L.L and returns the address of the new_node inserted or `NULL` if it could not be inserted at the specified index.
+
+###     
