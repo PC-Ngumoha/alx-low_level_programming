@@ -9,4 +9,7 @@ Contains the function `hash_djb2` which takes a string argument and uses the `dj
 ### 2-key_index.c
 Contains the function `key_index` which takes the `key` and then uses the `hash_djb2` function to generate a hash value from which it generates the index on the hash table where the current item item can be stored or retrieved. The `index` is returned at the end of the function.
 
+### 3-hash_table_set.c
+Contains the function `hash_table_set` which takes the hash table `ht`, a `key` and `value` as it's arguments and then stores in `key:value` pair in a slot on the hash table `ht`. returns `1` if it succeeded and `0` if it failed.
+
 ###  
