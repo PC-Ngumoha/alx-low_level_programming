@@ -10,10 +10,12 @@
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	hash_node_t *new, *curr, *replace;
+	hash_node_t *new;
 	unsigned long int index;
 
 	if (ht == NULL)
+		return (0);
+	if (key == NULL || value == NULL)
 		return (0);
 	new = malloc(sizeof(hash_node_t));
 	if (new == NULL)
@@ -28,18 +30,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 	else
 	{
-		curr = ht->array[index];
-		while (((curr->next)->key != new->key) && (curr->next != NULL))
-			curr = curr->next;
-		if ((curr->next)->key == new->key)
-		{
-			replace = curr->next;
-			new->next = (curr->next)->next;
-			curr->next = new;
-			free(replace);
-		}
-		if (curr->next == NULL)
-			curr->next = new;
+		new->next = ht->array[index];
+		ht->array[index] = new;
 	}
 	return (1);
 }
