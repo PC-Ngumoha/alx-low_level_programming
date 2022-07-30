@@ -12,4 +12,7 @@ Contains the function `key_index` which takes the `key` and then uses the `hash_
 ### 3-hash_table_set.c
 Contains the function `hash_table_set` which takes the hash table `ht`, a `key` and `value` as it's arguments and then stores in `key:value` pair in a slot on the hash table `ht`. returns `1` if it succeeded and `0` if it failed.
 
-###  
+### 4-hash_table_get.c
+Contains the function `hash_table_get` which takes the hash table `ht` and a `key` and, if `key` is found, it returns the associated `value`, Otherwise, it returns `NULL`.
+
+###   
