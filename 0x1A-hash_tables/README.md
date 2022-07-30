@@ -15,4 +15,7 @@ Contains the function `hash_table_set` which takes the hash table `ht`, a `key` 
 ### 4-hash_table_get.c
 Contains the function `hash_table_get` which takes the hash table `ht` and a `key` and, if `key` is found, it returns the associated `value`, Otherwise, it returns `NULL`.
 
-###   
+### 5-hash_table_print.c
+Contains the function `hash_table_print` which takes a hash table `ht` as it's argument and prints out the content of the hash table to the screen. If `ht` is `NULL`, the function does not print anything.
+
+###    
