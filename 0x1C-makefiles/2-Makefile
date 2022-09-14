@@ -4,9 +4,7 @@ NAME = school
 SRC = main.c
 OBJ = main.o
 
-all: ${NAME}
-
-${NAME}: ${OBJ} ${OBJ:main.o=school.o}
+all: ${OBJ} ${OBJ:main.o=school.o}
 	${CC} ${OBJ}  ${OBJ:main.o=school.o} -o ${NAME}
 
 ${OBJ} : ${SRC}
