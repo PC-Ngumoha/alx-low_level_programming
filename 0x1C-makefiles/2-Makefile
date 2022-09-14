@@ -1,8 +1,8 @@
 # -*- 2-Makefile -*-
 CC := gcc
 NAME := school
-OBJ := main.o school.o
 SRC := main.c school.c
+OBJ := $(SRC:%.c=%.o)
 
 all: ${OBJ}
 	${CC} ${OBJ} -o ${NAME}
