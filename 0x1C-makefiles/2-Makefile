@@ -1,14 +1,14 @@
 # 2-Makefile
 CC = gcc
 NAME = school
-SRC = main.c
+SRC = main.c school.c
 OBJ = main.o
 
 all: ${OBJ} ${OBJ:main.o=school.o}
-	${CC} ${OBJ}  ${OBJ:main.o=school.o} -o ${NAME}
+	${CC} ${OBJ} ${OBJ:main.o=school.o} -o ${NAME}
 
-${OBJ} : ${SRC}
-	${CC} -c -o ${OBJ} ${SRC}
+${OBJ} : $(findstring main.c, ${SRC})
+	${CC}     -c -o ${OBJ} $(findstring main.c, ${SRC})
 
-${OBJ:main.o=school.o} : ${SRC:main.c=school.c}
-	${CC} -c -o ${OBJ:main.o=school.o} ${SRC:main.c=school.c}
+${OBJ:main.o=school.o} : $(findstring school.c, ${SRC})
+	${CC}     -c -o ${OBJ:main.o=school.o} $(findstring school.c, ${SRC})
