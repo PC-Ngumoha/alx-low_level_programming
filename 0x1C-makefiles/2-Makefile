@@ -1,0 +1,14 @@
+# -*- 2-Makefile -*-
+CC := gcc
+NAME := school
+OBJ := main.o school.o
+SRC := main.c school.c
+
+all: ${OBJ}
+	${CC} ${OBJ} -o ${NAME}
+
+main.o : $(findstring main.c, $(SRC))
+	${CC} -c -o main.o $(findstring main.c, $(SRC))
+
+school.o : $(findstring school.c, $(SRC))
+	${CC} -c -o school.o $(findstring school.c, $(SRC))
