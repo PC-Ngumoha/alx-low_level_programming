@@ -1,14 +1,16 @@
 # 2-Makefile
-CC := gcc
-NAME := school
-SRC := main.c
-OBJ := main.o
+CC = gcc
+NAME = school
+SRC = main.c
+OBJ = main.o
 
-all: ${OBJ} $(OBJ:main.o=school.o)
-	${CC} ${OBJ}  $(OBJ:main.o=school.o) -o ${NAME}
+all: ${NAME}
 
-main.o : ${SRC}
-	${CC} -c -o main.o ${SRC}
+${NAME}: ${OBJ} ${OBJ:main.o=school.o}
+	${CC} ${OBJ}  ${OBJ:main.o=school.o} -o ${NAME}
 
-school.o : $(SRC:main.c=school.c)
-	${CC} -c -o school.o $(SRC:main.c=school.c)
+${OBJ} : ${SRC}
+	${CC} -c -o ${OBJ} ${SRC}
+
+${OBJ:main.o=school.o} : ${SRC:main.c=school.c}
+	${CC} -c -o ${OBJ:main.o=school.o} ${SRC:main.c=school.c}
