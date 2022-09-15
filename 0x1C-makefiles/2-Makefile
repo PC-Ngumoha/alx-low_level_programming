@@ -2,13 +2,7 @@
 CC = gcc
 NAME = school
 SRC = main.c school.c
-OBJ = main.o
+OBJ = $(SRC:.c=.o)
 
-all: ${OBJ} ${OBJ:main.o=school.o}
-	${CC} ${OBJ} ${OBJ:main.o=school.o} -o ${NAME}
-
-${OBJ} : $(findstring main.c, ${SRC})
-	${CC}     -c -o ${OBJ} $(findstring main.c, ${SRC})
-
-${OBJ:main.o=school.o} : $(findstring school.c, ${SRC})
-	${CC}     -c -o ${OBJ:main.o=school.o} $(findstring school.c, ${SRC})
+all: $(OBJ) m.h
+	$(CC) $(OBJ) -o $(NAME)
