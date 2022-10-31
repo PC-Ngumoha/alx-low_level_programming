@@ -1,4 +1,4 @@
-# WHAT EACH C PROGRAM DOES
+# WHAT EACH C PROGRAM DOES.
 
 ## Basic code files
 
